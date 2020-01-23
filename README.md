@@ -1,6 +1,6 @@
 # COP4331---Group-6
 
-Banana Bandana Savanna
+## Banana Bandana Savanna
 
 What will the product do?
    
@@ -21,6 +21,6 @@ How does the product compare against similar products already on the market?
 
 __This product is for teenagers and adults who desire to entertain themselves and improve their stretegic thinking abilities. 
 
-__The product, Banana Bandana Savanna, a top down 2d stategic turn-based game. It will feature monkeys battling each other with weapons, avoiding environmental obstacles in order to capture the opponenent's 'bandana'.
+__The product, Banana Bandana Savanna, a top down 2d strategic turn-based game. It will feature monkeys battling each other with weapons, avoiding environmental obstacles in order to capture 'bandana' of the opponents.
 
 __Similar games are those such as Mario + Rabbids Kingdom Battle or Worms. In our product, the focus will be on flag retrieval.
