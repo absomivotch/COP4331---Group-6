@@ -13,13 +13,14 @@ Why are you creating this particular product?
 Who will benefit from this product?
    
   > The target audience of teenagers to adults with interest in tactic-based games
-    How does the product compare against similar products already on the market?
+     
+How does the product compare against similar products already on the market?
+
+  > In this game, players will be able to snatch the 'bandanas' from enemy opponents, implementing capture-the-flag based gameplay.
 
 
+__This product is for teenagers and adults who desire to entertain themselves and improve their stretegic thinking abilities. 
 
-   This product is for teenagers and adults 
-   who desire to entertain themselves and improve their stretegic thinking abilities. 
-   The product, Banana Bandana Savanna, a top down 2d stategic turnbased game,
-   provides unique and appealing features such as:TBD 
-   Unlike the competetiors such as Mario + Rabbids Kingdom Battle or Worms,
-   Our product offers TBD
+__The product, Banana Bandana Savanna, a top down 2d stategic turn-based game. It will feature monkeys battling each other with weapons, avoiding environmental obstacles in order to capture the opponenent's 'bandana'.
+
+__Similar games are those such as Mario + Rabbids Kingdom Battle or Worms. In our product, the focus will be on flag retrieval.
