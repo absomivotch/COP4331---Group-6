@@ -19,8 +19,8 @@ How does the product compare against similar products already on the market?
   > In this game, players will be able to snatch the 'bandanas' from enemy opponents, implementing capture-the-flag based gameplay.
 
 
-__This product is for teenagers and adults who desire to entertain themselves and improve their strategic thinking abilities.
+**This product is for teenagers and adults who desire to entertain themselves and improve their strategic thinking abilities.
 
-__The product, Banana Bandana Savanna, a top down 2d strategic turn-based game. It will feature monkeys battling each other with weapons, avoiding environmental obstacles in order to capture 'bandana' of the opponents.
+**The product, Banana Bandana Savanna, a top down 2d strategic turn-based game. It will feature monkeys battling each other with weapons, avoiding environmental obstacles in order to capture the 'bandana' of the opponent's team.
 
-__Similar games are those such as Mario + Rabbids Kingdom Battle or Worms. In our product, the focus will be on flag retrieval.
+**Similar games are those such as Mario + Rabbids Kingdom Battle or Worms. In our product, the focus will be on flag retrieval.
