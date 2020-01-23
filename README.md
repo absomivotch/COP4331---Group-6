@@ -1,7 +1,5 @@
 # COP4331---Group-6
 
-# COP4331---Group-6
-
 Banana Bandana Savanna
 
     What will the product do?
