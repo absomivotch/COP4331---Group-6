@@ -15,7 +15,7 @@ Who will benefit from this product?
   > The target audience of teenagers to adults with interest in tactic-based games
     How does the product compare against similar products already on the market?
 
-You should frame this vision statement in terms of an elevator pitch:
+
 
    This product is for teenagers and adults 
    who desire to entertain themselves and improve their stretegic thinking abilities. 
