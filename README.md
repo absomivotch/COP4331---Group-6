@@ -1,26 +1,27 @@
 # COP4331---Group-6
 
 ## Banana Bandana Savanna
+### Product Vision
+---
 
-What will the product do?
+Hello! We’re Group 6 and our product will be a video game that we’ve titled ‘Banana Bandana Savanna’.
+Made in Unity, this game will be a fun Top-Down Turn-Based Strategy game with a capture-the-flag component to it.
+Each player will control a team of monkeys to fight an enemy monkey team using banana-based weaponry. Each team will have one monkey wearing a bandana on its head. The objective of the game will be to use your monkeys to ‘capture’ that bandana and bring back to the tree base, avoiding enemy fire and environmental obstacles in order to win.
 
-   > It will provide entertainment for the masses and encourage strategic thought and team building skills.
+The reason we have chosen to do this particular product is so that we, as a team, can gain more insight into building tactic-based video games and have fun while doing so. The target audience for this game will be teenagers and adults. However games like this, which encourage strategic thought and team building, can perhaps benefit more than just the intended target audience, bringing entertainment to the masses at large.
 
-Why are you creating this particular product?
+In addition to providing entertainment, our game can also help improve strategic thinking capabilities. Other games that have already succeeded in this objective are titles like ‘Worms’ or ‘Mario + Rabbids Kingdom Battle’. Taking their lead, we’ll see how well our game can compare. 
 
-   > For greater insight into building strategic video game software.
+## Team Members
+---
 
-Who will benefit from this product?
+* Carlos Rodriguez
+* Jacob Rogers
+* Mark Pedroso
+* Zachary Chiapperini
 
-  > The target audience of teenagers to adults with interest in tactic-based games
-
-How does the product compare against similar products already on the market?
-
-  > In this game, players will be able to snatch the 'bandanas' from enemy opponents, implementing capture-the-flag based gameplay.
-
-
-**This product is for teenagers and adults who desire to entertain themselves and improve their strategic thinking abilities.
-
-**The product, Banana Bandana Savanna, a top down 2d strategic turn-based game. It will feature monkeys battling each other with weapons, avoiding environmental obstacles in order to capture the 'bandana' of the opponent's team.
-
-**Similar games are those such as Mario + Rabbids Kingdom Battle or Worms. In our product, the focus will be on flag retrieval.
+# Sprint 1
+---
+* Links
+* Links
+* Links
