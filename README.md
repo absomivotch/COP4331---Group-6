@@ -22,6 +22,4 @@ In addition to providing entertainment, our game can also help improve strategic
 
 # Sprint 1
 ---
-* Links
-* Links
-* Links
+* [Google Sheet](https://docs.google.com/spreadsheets/d/1uySoD-k8hxeVBR0f01xOkuF6dbDsHr-cYc2xFBini80/edit?usp=sharing)
