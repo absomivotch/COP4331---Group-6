@@ -22,4 +22,8 @@ In addition to providing entertainment, our game can also help improve strategic
 
 # Sprint 1
 ---
-* [Google Sheet](https://docs.google.com/spreadsheets/d/1uySoD-k8hxeVBR0f01xOkuF6dbDsHr-cYc2xFBini80/edit?usp=sharing)
+* [Product Backlog](https://docs.google.com/spreadsheets/d/1uySoD-k8hxeVBR0f01xOkuF6dbDsHr-cYc2xFBini80/edit#gid=0)
+* [Sprint Backlog](https://docs.google.com/spreadsheets/d/1uySoD-k8hxeVBR0f01xOkuF6dbDsHr-cYc2xFBini80/edit#gid=370210456)
+* [Requirements](https://docs.google.com/spreadsheets/d/1uySoD-k8hxeVBR0f01xOkuF6dbDsHr-cYc2xFBini80/edit#gid=1721495224)
+* [Burndown Chart](https://docs.google.com/spreadsheets/d/1uySoD-k8hxeVBR0f01xOkuF6dbDsHr-cYc2xFBini80/edit#gid=2081519143)
+* [Velocity Chart](https://docs.google.com/spreadsheets/d/1uySoD-k8hxeVBR0f01xOkuF6dbDsHr-cYc2xFBini80/edit#gid=837230794)
