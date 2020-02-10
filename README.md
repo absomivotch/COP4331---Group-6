@@ -39,4 +39,7 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Velocity Chart](https://docs.google.com/spreadsheets/d/1ED_Utz6KD1VeIgHuWosBSPswLwdvwxMXLDX1L4okYjg/edit#gid=837230794)
 * Design
    * [Class Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/classDiagram.png)
+   * [Architecture Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/0.jpg)
+   * [User Interface Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/1.jpg)
+   * [Class Descriptions](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/Class_Descriptions.md)
 * [Demonstration](https://www.youtube.com/watch?v=R6yoIlHlOPM)
