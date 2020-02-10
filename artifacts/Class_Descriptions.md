@@ -1,7 +1,7 @@
 Classes<br/>
-MainMenu()<br/>
+MainMenu()
 * This class stores the functions of the Main Menu Screen.
-<br/>OptionsScreen()<br/>
+OptionsScreen()<br/>
 * This class stores the functions of the Options Screen.
 <br/>OptionsButton()<br/>
 * This class stores the function of the Options Button, which is to change the menu into the Option Screen.
