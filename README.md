@@ -37,5 +37,6 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Trello Board](https://trello.com/b/snQUp9cN/group6)
 * [Burndown Chart](https://docs.google.com/spreadsheets/d/1ED_Utz6KD1VeIgHuWosBSPswLwdvwxMXLDX1L4okYjg/edit#gid=2081519143)
 * [Velocity Chart](https://docs.google.com/spreadsheets/d/1ED_Utz6KD1VeIgHuWosBSPswLwdvwxMXLDX1L4okYjg/edit#gid=837230794)
-* [Design Document](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/classDiagram.png)
+* Design
+  *[Class Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/classDiagram.png)
 * [Demonstration](https://www.youtube.com/watch?v=R6yoIlHlOPM)
