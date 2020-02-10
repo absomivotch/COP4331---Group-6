@@ -1,47 +1,47 @@
-Classes
-MainMenu()
+Classes<br/>
+MainMenu()<br/>
 * This class stores the functions of the Main Menu Screen.
-OptionsScreen()
+<br/>OptionsScreen()<br/>
 * This class stores the functions of the Options Screen.
-OptionsButton()
+<br/>OptionsButton()<br/>
 * This class stores the function of the Options Button, which is to change the menu into the Option Screen.
-PauseScreen()
+<br/>PauseScreen()<br/>
 * This class stores the functions of the Pause Screen.
-QuitButton()
+<br/>QuitButton()<br/>
 * This class stores the function of the Quit Button, which is to end the game.
-ResumeButton()
+<br/>ResumeButton()<br/>
 * This class stores the function of the Resume Button, which has the game resume playing after having frozen..
-LineupSelect()
+<br/>LineupSelect()<br/>
 * This class stores the functions of the Main Menu Screen.
-PlayerCharacter()
+<br/>PlayerCharacter()<br/>
 * This class stores the functions of the Player Character
-GameOverScreen()
+<br/>GameOverScreen()<br/>
 * This class stores the functions of the Game Over Screen.
-EnemyCharacter()
+<br/>EnemyCharacter()<br/>
 * This class stores the functions of the Enemy Ai.
-Mud()
+<br/>Mud()<br/>
 * This class stores the functions of the Mud environmental hazard.
-River()
+<br/>River()<br/>
 * This class stores the functions of the River environmental hazard.
-Weapon()
+<br/>Weapon()<br/>
 * This class stores the functions of Weapons objects.
-BananaPeel()
+<br/>BananaPeel()<br/>
 * This class stores the functions of the Banana Peel object.
-Vine()
+<br/>Vine()<br/>
 * This class stores the functions of the Vine object.
-Grenade()
+<br/>Grenade()<br/>
 * This class stores the functions of the Grenade object
-WoodenGun()
+<br/>WoodenGun()<br/>
 * This class stores the functions of the wooden gun object.
-Tree()
+<br/>Tree()<br/>
 * This class stores the functions of the tree object
-Treehouse()
+<br/>Treehouse()<br/>
 * This class stores the functions of the Treehouse base
-Barrel()
+<br/>Barrel()<br/>
 * This class stores the functions of the barrel object.
-Projectile()
+<br/>Projectile()<br/>
 * This class stores the functions of projectile objects
-Music()
+<br/>Music()<br/>
 * This class stores the functions of the music player
-FallenLog()
+<br/>FallenLog()<br/>
 * This class stores the functions of the fallen log object
