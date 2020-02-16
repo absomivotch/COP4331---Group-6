@@ -60,5 +60,5 @@ In addition to providing entertainment, our game can also help improve strategic
    * [User Interface Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/1.jpg)
    * [Class Descriptions](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/Class_Descriptions.md)
 * Demonstration
-* Code
+* [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
 * Tests
