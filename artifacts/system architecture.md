@@ -1,10 +1,11 @@
 
 # Program Organization
 
-<img src = "/0.jpg" width="1000" >
+<img src = "/artifacts/0.jpg">
 
 # Major Classes
 
+<img src = "/artifacts/classDiagram.png">
 
 # Data Design
 We do not need databases for this project, so this does not apply.
