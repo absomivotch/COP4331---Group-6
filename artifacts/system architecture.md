@@ -11,15 +11,28 @@
 We do not need databases for this project, so this does not apply.
 
 # Business Rules
+Since this is a game, it is expected to be playable. Also, players of this game are expected to read English.
+...Perhaps I should say instead that players of this game are expected to be able to read.
+This is all that is generally expected of this game and its players.
 
 # User Interface Design
 
+<img src = "/artifacts/1.jpg">
 
 # Resource Management
+Resources for this project will consist of the Game Assets, Scripts, and Scenes.
+Since most Assets will be borrowed, we will not be using any that will disrupt the frame rate of the game.
+Scripts that run for too long and disrupt down gameplay will be either modified or discarded.
+There is no limit to the size of Scenes. They will be as large or as small as they need to be.
 
 # Security
+The Unity Project will be stored on github for anyone to download.
+It will also be stored on each team member's computer(s).
+Therefore, the security the game has is minimal.
+
 
 # Performance
+Although this is a 3D game, it is set up like 2D and is not expected to be particularly performance heavy.
 
 # Scalability
 
