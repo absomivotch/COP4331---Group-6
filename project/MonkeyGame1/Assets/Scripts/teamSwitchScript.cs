@@ -7,6 +7,11 @@ public class teamSwitchScript : MonoBehaviour
     public GameObject player1Team = GameObject.Find("player1Team");
     public GameObject player2Team = GameObject.Find("player2Team");
 
+    void Start()
+    {
+        player1Team.GetComponent<playerMovement>().enabled = true;
+        player2Team.GetComponent<playerMovement>().enabled = false;
+    }
 
     // Update is called once per frame
     void Update()
