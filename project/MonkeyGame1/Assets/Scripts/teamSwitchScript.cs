@@ -9,8 +9,8 @@ public class teamSwitchScript : MonoBehaviour
 
     void Start()
     {
-        player1Team.GetComponent<playerMovement>().enabled = true;
-        player2Team.GetComponent<playerMovement>().enabled = false;
+        player1Team.SetActive(true);
+        player2Team.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,14 +19,14 @@ public class teamSwitchScript : MonoBehaviour
 
         if (Input.GetKey("q"))
         {
-            player1Team.GetComponent<playerMovement>().enabled = true;
-            player2Team.GetComponent<playerMovement>().enabled = false;
+            player1Team.SetActive(true);
+            player2Team.SetActive(false);
         }
 
         if (Input.GetKey("e"))
         {
-            player1Team.GetComponent<playerMovement>().enabled = false;
-            player2Team.GetComponent<playerMovement>().enabled = true;
+            player1Team.SetActive(false);
+            player2Team.SetActive(true);
         }
     }
 }

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 77914757}
   - component: {fileID: 77914756}
   - component: {fileID: 77914755}
+  - component: {fileID: 77914754}
   m_Layer: 0
   m_Name: player2SlotA
   m_TagString: Player
@@ -153,6 +154,19 @@ Transform:
   m_Father: {fileID: 1781400601}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &77914754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77914752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5728e806bc3c443e183995a715bbe46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!136 &77914755
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -225,6 +239,7 @@ GameObject:
   - component: {fileID: 264831302}
   - component: {fileID: 264831301}
   - component: {fileID: 264831300}
+  - component: {fileID: 264831299}
   m_Layer: 0
   m_Name: player2SlotC
   m_TagString: Player
@@ -246,6 +261,19 @@ Transform:
   m_Father: {fileID: 1781400601}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264831299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264831297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5728e806bc3c443e183995a715bbe46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!136 &264831300
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1256,7 +1284,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: -1.309e-42, y: -6.08e-43, z: 6e-45, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1441,6 +1469,7 @@ GameObject:
   - component: {fileID: 949931546}
   - component: {fileID: 949931545}
   - component: {fileID: 949931544}
+  - component: {fileID: 949931543}
   m_Layer: 0
   m_Name: player1SlotC
   m_TagString: Player
@@ -1462,6 +1491,19 @@ Transform:
   m_Father: {fileID: 1032842358}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &949931543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949931541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5728e806bc3c443e183995a715bbe46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!136 &949931544
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1614,7 +1656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1032842358}
-  - component: {fileID: 1032842359}
+  - component: {fileID: 1032842360}
   m_Layer: 0
   m_Name: player1Team
   m_TagString: Untagged
@@ -1639,7 +1681,7 @@ Transform:
   m_Father: {fileID: 526767164}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1032842359
+--- !u!114 &1032842360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1648,10 +1690,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1032842357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5728e806bc3c443e183995a715bbe46b, type: 3}
+  m_Script: {fileID: 11500000, guid: a5e153d12ef500144aea98eb176b7688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  characters:
+  - {fileID: 1107194764}
+  - {fileID: 1508536647}
+  - {fileID: 949931541}
+  activeChar: 0
 --- !u!1 &1066296876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,6 +1881,7 @@ GameObject:
   - component: {fileID: 1107194767}
   - component: {fileID: 1107194766}
   - component: {fileID: 1107194765}
+  - component: {fileID: 1107194769}
   m_Layer: 0
   m_Name: player1SlotA
   m_TagString: Player
@@ -1916,6 +1963,19 @@ Transform:
   m_Father: {fileID: 1032842358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107194769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107194764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5728e806bc3c443e183995a715bbe46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &1145378884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2244,7 @@ GameObject:
   - component: {fileID: 1508536652}
   - component: {fileID: 1508536651}
   - component: {fileID: 1508536650}
+  - component: {fileID: 1508536649}
   m_Layer: 0
   m_Name: player1SlotB
   m_TagString: Player
@@ -2205,6 +2266,19 @@ Transform:
   m_Father: {fileID: 1032842358}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1508536649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508536647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5728e806bc3c443e183995a715bbe46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!136 &1508536650
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2343,6 +2417,7 @@ GameObject:
   - component: {fileID: 1585754611}
   - component: {fileID: 1585754610}
   - component: {fileID: 1585754609}
+  - component: {fileID: 1585754608}
   m_Layer: 0
   m_Name: player2SlotB
   m_TagString: Player
@@ -2364,6 +2439,19 @@ Transform:
   m_Father: {fileID: 1781400601}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1585754608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585754606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5728e806bc3c443e183995a715bbe46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!136 &1585754609
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2700,7 +2788,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1781400600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5728e806bc3c443e183995a715bbe46b, type: 3}
+  m_Script: {fileID: 11500000, guid: a5e153d12ef500144aea98eb176b7688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  characters:
+  - {fileID: 77914752}
+  - {fileID: 1585754606}
+  - {fileID: 264831297}
+  activeChar: 0
