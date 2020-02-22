@@ -37,12 +37,7 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Trello Board](https://trello.com/b/snQUp9cN/group6)
 * [Burndown Chart](https://docs.google.com/spreadsheets/d/1ED_Utz6KD1VeIgHuWosBSPswLwdvwxMXLDX1L4okYjg/edit#gid=2081519143)
 * [Velocity Chart](https://docs.google.com/spreadsheets/d/1ED_Utz6KD1VeIgHuWosBSPswLwdvwxMXLDX1L4okYjg/edit#gid=837230794)
-* Design
-   * [System Architecture Document](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
-   * [Class Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/classDiagram.png)
-   * [Architecture Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/0.jpg)
-   * [User Interface Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/1.jpg)
-   * [Class Descriptions](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/Class_Descriptions.md)
+* [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
 * [Demonstration](https://www.youtube.com/watch?v=R6yoIlHlOPM)
 
 # Sprint 3
@@ -53,12 +48,20 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Trello Board](https://trello.com/b/snQUp9cN/group6)
 * [Burndown Chart](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=2081519143)
 * [Velocity Chart](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=837230794)
-* Design
-   * [System Architecture Document](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
-   * [Class Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/classDiagram.png)
-   * [Architecture Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/0.jpg)
-   * [User Interface Diagram](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/1.jpg)
-   * [Class Descriptions](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/Class_Descriptions.md)
+* [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
 * Demonstration
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
 * Tests
+
+# Sprint 4
+---
+* [Product Backlog](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=0)
+* [Sprint Backlog](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=370210456)
+* [Requirements](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=1721495224)
+* [Trello Board](https://trello.com/b/snQUp9cN/group6)
+* [Burndown Chart](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=2081519143)
+* [Velocity Chart](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=837230794)
+* [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
+* Demonstration
+* [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
+* Automated Tests
