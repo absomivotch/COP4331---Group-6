@@ -5,32 +5,37 @@
 
 # Major Classes
 
-<img src = "/artifacts/classDiagram.png">
-Classes
+<img src = "/artifacts/c4_classDiagram_MainM.png">
 
 MainMenu()<br/>* This class stores the functions of the Main Menu Screen.
-<br/><br/>OptionsScreen()<br/>* This class stores the functions of the Options Screen.
-<br/><br/>OptionsButton()<br/>* This class stores the function of the Options Button, which is to change the menu into the Option Screen.
-<br/><br/>PauseScreen()<br/>* This class stores the functions of the Pause Screen.
-<br/><br/>QuitButton()<br/>* This class stores the function of the Quit Button, which is to end the game.
-<br/><br/>ResumeButton()<br/>* This class stores the function of the Resume Button, which has the game resume playing after having frozen..
-<br/><br/>LineupSelect()<br/>* This class stores the functions of the Main Menu Screen.
-<br/><br/>PlayerCharacter()<br/>* This class stores the functions of the Player Character
-<br/><br/>GameOverScreen()<br/>* This class stores the functions of the Game Over Screen.
-<br/><br/>EnemyCharacter()<br/>* This class stores the functions of the Enemy Ai.
-<br/><br/>Mud()<br/>* This class stores the functions of the Mud environmental hazard.
-<br/><br/>River()<br/>* This class stores the functions of the River environmental hazard.
-<br/><br/>Weapon()<br/>* This class stores the functions of Weapons objects.
-<br/><br/>BananaPeel()<br/>* This class stores the functions of the Banana Peel object.
-<br/><br/>Vine()<br/>* This class stores the functions of the Vine object.
-<br/><br/>Grenade()<br/>* This class stores the functions of the Grenade object
-<br/><br/>WoodenGun()<br/>* This class stores the functions of the wooden gun object.
-<br/><br/>Tree()<br/>* This class stores the functions of the tree object
-<br/><br/>Treehouse()<br/>* This class stores the functions of the Treehouse base
-<br/><br/>Barrel()<br/>* This class stores the functions of the barrel object.
-<br/><br/>Projectile()<br/>* This class stores the functions of projectile objects
-<br/><br/>Music()<br/>* This class stores the functions of the music player
-<br/><br/>FallenLog()<br/>* This class stores the functions of the fallen log object
+<br/>OptionsScreen()<br/>* This class stores the functions of the Options Screen.
+<br/>CharacterSelect()<br/>* This class stores the functions of the Character Select Screen.
+<br/>LevelSelect()<br/>* This class stores the functions of the Level Select Screen.
+
+<img src = "/artifacts/c4_classDiagram_Game.png">
+
+Environment()<br/>* This class stores classes and functions of objects in the environment.
+<br/>Treebase()<br/>* This class stores the functions of the Treehouse base
+<br/>Barrel()<br/>* This class stores the functions of the Monkey Barrel.
+<br/>Mud()<br/>* This class stores the functions of the Mud environmental hazard.
+<br/>River()<br/>* This class stores the functions of the River environmental hazard.
+<br/>Vine()<br/>* This class stores the functions of the Vine object.
+
+<br/>Bandana()<br/>* This class stores the functions of the Bandana object.
+<br/>CoconutCursor()<br/>* This class stores the functions of the Coconut Cursor
+<br/>Grid()<br/>* This class stores the functions of the Movement Grid.
+<br/>Cover()<br/>* This class stores the cover function of Cover obstacles
+
+<br/>Character()<br/>* This class stores the functions of the characters
+<br/>Weapon()<br/>* This class stores the functions of Weapons.
+<br/>Range()<br/>* This class stores the long range functions of Attack Mode.
+<br/>Melee()<br/>* This class stores the short range functions of Attack Mode.
+
+<br/>Pause Menu()<br/>* This class stores the functions of the Pause Menu.
+<br/>InGameOptions()<br/>* This class stores the functions of the In-Game Options Menu.
+<br/>InGameLevel()<br/>* This class stores the functions of the In-Game Level Select Menu.
+<br/>GameOver()<br/>* This class stores the functions of the Game Over Menu.
+<br/>Victory()<br/>* This class stores the functions of the Victory Screen Menu.
 
 
 # Data Design
@@ -61,11 +66,10 @@ Therefore, the security the game has is minimal.
 Although this is a 3D game, it is set up like a 2D game and is not expected to be particularly performance heavy.
 
 # Scalability
-After the core mechanics of our game are established, it will be simple to use the Unity interface to add new features to the game.
-In building a game, the main thing that truly limits us is time.
+After being built, a unity game can no longer have anything added to it. It also cannot have anything taken away. Therefore, I would not consider it scalable.
 
 # Interoperability
-This will not be needed, for our game requires only one machine.
+This does not apply, as Unity games only work with Unity games.
 
 # Internationalization/Localization
 We do not intend to import this game to a different nation. We also do not intend to translate into another language.
