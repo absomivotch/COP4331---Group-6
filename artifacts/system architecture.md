@@ -1,18 +1,27 @@
 
 # Program Organization
+Architecture Diagrams
+<br>System Context Diagram:
+<br/><img src = "/artifacts/C1.jpg">
 
-<img src = "/artifacts/0.jpg">
+<br/>Container Diagram:
+<br/><img src = "/artifacts/C2.jpg">
+
+<br/>Component Diagram:
+<br/><img src = "/artifacts/C3.jpg">
 
 # Major Classes
-
-<img src = "/artifacts/c4_classDiagram_MainM.png">
+Class Diagrams
+<br/>Main Menu Classes:
+<br/><img src = "/artifacts/c4_classDiagram_MainM.png">
 
 MainMenu()<br/>* This class stores the functions of the Main Menu Screen.
 <br/>OptionsScreen()<br/>* This class stores the functions of the Options Screen.
 <br/>CharacterSelect()<br/>* This class stores the functions of the Character Select Screen.
 <br/>LevelSelect()<br/>* This class stores the functions of the Level Select Screen.
 
-<img src = "/artifacts/c4_classDiagram_Game.png">
+<br/>Game Classes:
+<br/><img src = "/artifacts/c4_classDiagram_Game.png">
 
 Environment()<br/>* This class stores classes and functions of objects in the environment.
 <br/>Treebase()<br/>* This class stores the functions of the Treehouse base
