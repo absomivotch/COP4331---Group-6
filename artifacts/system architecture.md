@@ -48,7 +48,8 @@ This is all that is generally expected of this game and its players.
 
 # User Interface Design
 
-<img src = "/artifacts/1.jpg">
+<img src = "/artifacts/UI_1.jpg">
+<img src = "/artifacts/UI_2.jpg">
 
 # Resource Management
 Resources for this project will consist of the Game Assets, Scripts, and Scenes.
