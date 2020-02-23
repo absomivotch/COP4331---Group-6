@@ -58,6 +58,7 @@ In addition to providing entertainment, our game can also help improve strategic
 ### Team Member Responsibilities:
 #### Carlos Rodriguez (abisomivotch)
 * Modifying Architecture Design Document
+* Modifying UI Diagram
 * Modifying Burndown and Velocity Charts
 #### Jacob Rogers (cn7abc)
 * Working on the Coconut Cursor
@@ -65,6 +66,7 @@ In addition to providing entertainment, our game can also help improve strategic
 * Working on character turn switch.
 * Working on team turn switch.
 #### Zachary Chiapperini (zachchiapp)
+* Asset Fetching
 
 ### Sprint 4 Documentation
 ---
