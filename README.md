@@ -56,16 +56,17 @@ In addition to providing entertainment, our game can also help improve strategic
 # Sprint 4
 ---
 Team Member Responsibilities:
-Carlos Rodriguez (abisomivotch)
-* Modifying Architecture Design Document
-* Modifying Burndown and Velocity Charts
-Jacob Rogers (cn7abc)
-* Working on the Coconut Cursor
-Mark Pedroso (markp98)
-* Working on character turn switch.
-* Working on team turn switch.
-Zachary Chiapperini (zachchiapp)
-*
+<br/>Carlos Rodriguez (abisomivotch)
+<br/>* Modifying Architecture Design Document
+<br/>* Modifying Burndown and Velocity Charts
+<br/>Jacob Rogers (cn7abc)
+<br/>* Working on the Coconut Cursor
+<br/>Mark Pedroso (markp98)
+<br/>* Working on character turn switch.
+<br/>* Working on team turn switch.
+<br/>Zachary Chiapperini (zachchiapp)
+<br/>
+<br/>
 
 * [Requirements](https://docs.google.com/spreadsheets/d/1mYZByD686IfJs8sml-V-g1hDyDVMbFayXDVkZ7usfX4/edit#gid=1721495224)
 * [Trello Board](https://trello.com/b/snQUp9cN/group6)
