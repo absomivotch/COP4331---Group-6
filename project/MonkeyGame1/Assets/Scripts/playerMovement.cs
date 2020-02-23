@@ -27,7 +27,7 @@ public class playerMovement : MonoBehaviour
 
     private void TransformPosition(float deltaX, float deltaY)
     {
-        transform.Translate(deltaY, 0f, -deltaX);
+        transform.Translate(-deltaX, 0f, -deltaY);
     }
     void OnCollisionEnter(Collision collision)
     {
