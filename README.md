@@ -49,18 +49,28 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Burndown Chart](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=2081519143)
 * [Velocity Chart](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=837230794)
 * [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
-* Demonstration
+* Demonstration(https://www.youtube.com/watch?v=R6yoIlHlOPM)
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
 * Tests
 
 # Sprint 4
 ---
-* [Product Backlog](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=0)
-* [Sprint Backlog](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=370210456)
-* [Requirements](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=1721495224)
+Team Member Responsibilities:
+Carlos Rodriguez (abisomivotch)
+* Modifying Architecture Design Document
+* Modifying Burndown and Velocity Charts
+Jacob Rogers (cn7abc)
+* Working on the Coconut Cursor
+Mark Pedroso (markp98)
+* Working on character turn switch.
+* Working on team turn switch.
+Zachary Chiapperini (zachchiapp)
+*
+
+* [Requirements](https://docs.google.com/spreadsheets/d/1mYZByD686IfJs8sml-V-g1hDyDVMbFayXDVkZ7usfX4/edit#gid=1721495224)
 * [Trello Board](https://trello.com/b/snQUp9cN/group6)
-* [Burndown Chart](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=2081519143)
-* [Velocity Chart](https://docs.google.com/spreadsheets/d/1j03FpnteFgrnphKSFhL4ilV-zujYRW8grng44ZVGKJY/edit#gid=837230794)
+* [Burndown Chart](https://docs.google.com/spreadsheets/d/1mYZByD686IfJs8sml-V-g1hDyDVMbFayXDVkZ7usfX4/edit#gid=2081519143)
+* [Velocity Chart](https://docs.google.com/spreadsheets/d/1mYZByD686IfJs8sml-V-g1hDyDVMbFayXDVkZ7usfX4/edit#gid=837230794)
 * [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
 * Demonstration
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
