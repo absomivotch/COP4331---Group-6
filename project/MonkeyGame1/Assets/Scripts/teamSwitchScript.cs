@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class teamSwitchScript : MonoBehaviour
 {
-    public GameObject player1Team = GameObject.Find("player1Team");
-    public GameObject player2Team = GameObject.Find("player2Team");
+    public GameObject player1Team;
+    public GameObject player2Team;
 
     void Start()
     {
+        player1Team = GameObject.Find("player1Team");
+        player2Team = GameObject.Find("player2Team");
         player1Team.SetActive(true);
         player2Team.SetActive(false);
     }
