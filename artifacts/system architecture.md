@@ -10,6 +10,8 @@ Architecture Diagrams
 <br/>Component Diagram:
 <br/><img src = "/artifacts/C3.jpg">
 
+<br/>Features 1-5 involve the creation of the Main Menu. The rest of the user stories involve the creation of the Game.<br/>
+
 # Major Classes
 Class Diagrams
 <br/>Main Menu Classes:
@@ -23,12 +25,18 @@ MainMenu()<br/>* This class stores the functions of the Main Menu Screen.
 <br/>Game Classes:
 <br/><img src = "/artifacts/c4_classDiagram_Game.png">
 
-Environment()<br/>* This class stores classes and functions of objects in the environment.
-<br/>Treebase()<br/>* This class stores the functions of the Treehouse base
-<br/>Barrel()<br/>* This class stores the functions of the Monkey Barrel.
-<br/>Mud()<br/>* This class stores the functions of the Mud environmental hazard.
-<br/>River()<br/>* This class stores the functions of the River environmental hazard.
-<br/>Vine()<br/>* This class stores the functions of the Vine object.
+Environment() - (Feature 16)
+* This class stores classes and functions of objects in the environment.
+<br/>Treebase() - (Feature 38)
+* This class stores the functions of the Treehouse base
+<br/>Barrel() - (Feature 36)
+* This class stores the functions of the Monkey Barrel.
+<br/>Mud() - (Feature 40c)
+* This class stores the functions of the Mud environmental hazard.
+<br/>River() - (Feature 40h)
+* This class stores the functions of the River environmental hazard.
+Vine() - (Feature 40g)
+* This class stores the functions of the Vine object.
 
 <br/>Bandana()<br/>* This class stores the functions of the Bandana object.
 <br/>CoconutCursor()<br/>* This class stores the functions of the Coconut Cursor
@@ -48,12 +56,10 @@ Environment()<br/>* This class stores classes and functions of objects in the en
 
 
 # Data Design
-We do not need databases for this project, so this does not apply.
+We do not need databases for this project, so this does not apply to this project.
 
 # Business Rules
-Since this is a game, it is expected to be playable. Also, players of this game are expected to read English.
-...Perhaps I should say instead that players of this game are expected to be able to read.
-This is all that is generally expected of this game and its players.
+Since this is a game, it is expected to be playable. Also, players of this game are expected to read English. Other than that, there are no particular expectations for users of this game.
 
 # User Interface Design
 
@@ -61,55 +67,46 @@ This is all that is generally expected of this game and its players.
 <img src = "/artifacts/UI_2.jpg">
 
 # Resource Management
-Resources for this project will consist of the Game Assets, Scripts, and Scenes.
-Since most Assets will be borrowed, we will not be using any that will disrupt the frame rate of the game.
-Scripts that run for too long and disrupt down gameplay will be either modified or discarded.
-There is no limit to the size of Scenes. They will be as large or as small as they need to be.
+Unity manages memory automatically, so this item does not apply to the project.
 
 # Security
-The Unity Project will be stored on github for anyone to download.
-It will also be stored on each team member's computer(s).
-Therefore, the security the game has is minimal.
-
+Our Unity project does not have security level concerns, so this does not apply to the project. 
 
 # Performance
-Although this is a 3D game, it is set up like a 2D game and is not expected to be particularly performance heavy.
+Although this is a 3D game, it is set up like a 2D game and is not expected to be particularly performance heavy. This does not mean that performance isn’t a concern: if there are any assets that considerably slow down the game, they will be removed.
 
 # Scalability
-After being built, a unity game can no longer have anything added to it. It also cannot have anything taken away. Therefore, I would not consider it scalable.
+After being built, a unity game can no longer have anything added to it. It also cannot have anything taken away. Therefore, it has no scalability.
 
 # Interoperability
 This does not apply, as Unity games only work with Unity games.
 
 # Internationalization/Localization
-We do not intend to import this game to a different nation. We also do not intend to translate into another language.
-Therefore, Internationalization/Localization is not necessary.
+This game is not  to be important to another nation. It is not intended to be translated into another language.
+Therefore, Internationalization/Localization does not apply.
 
 # Input/Output
 This game will run with a keyboard and a mouse.
 It will also run using an X-Box 360 controller using the Unity Input Manager.
-This can also run using a Playstation controller through the use of external software that reads a Playstation controller input as an X-Box 360 controller.
 
 # Error Processing
-In Unity, any errors that develop during gameplay will show up on the console.
+In Unity, any errors that develop during gameplay will show up on the console. If the error is large, the program won't run.
 
 # Fault Tolerance
-When files go missing in a Unity project, the project does not shut itself down. As long as files are properly named, (or outright deleted) it isn't difficult to use the Unity Editor to find them again.
-If a file happens to be irrecoverable, we can still use back-ups to receover it.
+Aside from closing the program when it can no longer run the game, Unity doesn’t do anything to corrects errors in code. 
 
 # Architectural Feasibility
-If the architecture of our project is unfeasible, it will likely become apparent during our game playtesting. At that point, we can simply simply modify it until we have an architecture that works.
+The architecture of our project is feasible. Unity is capable of all the functions that we would need.
 
 # Overengineering
-To avoid overengineering, the game will be first developed starting from the core features and expanding onto side features. The team's weak points, character model creation and animation baking, will be kept at low priority.
+Unity games will not terminate over every single error. Unity will continue run the game unless as long as the error doesn't affect the game's functions. But since small errors can lead to bigger ones, we will be correcting them as well.
 
 # Build-vs-Buy Decisions
-Many assets on this game will be external assets.
-Most modeling resources will be bought for free on the Unity store.
-Character models may be used if they are completed, but if not they will be substituted with external assets as well.
+Many assets on this game will be external assets taken for free from the unity store.
+However, if they are completed, original Character models may be used for this project.
 
 # Reuse
-Assets for the game can be freely redistributed, although most of them are borrowed assets themselves.
+The software that will be used to develop this game is Unity.
 
 # Change Strategy
-Large gameplay changes will be discussed and approved of in the regular team meetings. Minor changes that do not involve gameplay can be implemented by any member freely.
+Large gameplay changes will be discussed and approved of in the regular team meetings. Minor changes that do not involve gameplay can be implemented by any member freely. All changes will kept within the scope of the project.
