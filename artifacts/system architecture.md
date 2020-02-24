@@ -10,17 +10,21 @@ Architecture Diagrams
 <br/>Component Diagram:
 <br/><img src = "/artifacts/C3.jpg">
 
-<br/>Features 1-5 involve the creation of the Main Menu. The rest of the user stories involve the creation of the Game.<br/>
+<br/>Features 2-5 involve the creation of the Main Menu. The rest of the user stories involve the creation of the Game.<br/>
 
 # Major Classes
 Class Diagrams
 <br/>Main Menu Classes:
 <br/><img src = "/artifacts/c4_classDiagram_MainM.png">
 
-MainMenu()<br/>* This class stores the functions of the Main Menu Screen.
-<br/>OptionsScreen()<br/>* This class stores the functions of the Options Screen.
-<br/>CharacterSelect()<br/>* This class stores the functions of the Character Select Screen.
-<br/>LevelSelect()<br/>* This class stores the functions of the Level Select Screen.
+MainMenu()- (Feature 2)
+* This class stores the functions of the Main Menu Screen.
+<br/>OptionsScreen() - (Feature 3)
+* This class stores the functions of the Options Screen.
+<br/>CharacterSelect() - (Feature 5)
+* This class stores the functions of the Character Select Screen.
+<br/>LevelSelect() - (Feature 4) 
+* This class stores the functions of the Level Select Screen.
 
 <br/>Game Classes:
 <br/><img src = "/artifacts/c4_classDiagram_Game.png">
@@ -35,24 +39,35 @@ Environment() - (Feature 16)
 * This class stores the functions of the Mud environmental hazard.
 <br/>River() - (Feature 40h)
 * This class stores the functions of the River environmental hazard.
-Vine() - (Feature 40g)
+<br/>Vine() - (Feature 40g)
 * This class stores the functions of the Vine object.
-
-<br/>Bandana()<br/>* This class stores the functions of the Bandana object.
-<br/>CoconutCursor()<br/>* This class stores the functions of the Coconut Cursor
-<br/>Grid()<br/>* This class stores the functions of the Movement Grid.
-<br/>Cover()<br/>* This class stores the cover function of Cover obstacles
-
-<br/>Character()<br/>* This class stores the functions of the characters
-<br/>Weapon()<br/>* This class stores the functions of Weapons.
-<br/>Range()<br/>* This class stores the long range functions of Attack Mode.
-<br/>Melee()<br/>* This class stores the short range functions of Attack Mode.
-
-<br/>Pause Menu()<br/>* This class stores the functions of the Pause Menu.
-<br/>InGameOptions()<br/>* This class stores the functions of the In-Game Options Menu.
-<br/>InGameLevel()<br/>* This class stores the functions of the In-Game Level Select Menu.
-<br/>GameOver()<br/>* This class stores the functions of the Game Over Menu.
-<br/>Victory()<br/>* This class stores the functions of the Victory Screen Menu.
+<br/>Bandana() - (Feature 37)
+* This class stores the functions of the Bandana object.
+<br/>CoconutCursor - (Feature 23)
+* This class stores the functions of the Coconut Cursor
+<br/>Grid() - (Feature 25)
+* This class stores the functions of the Movement Grid.
+<br/>Cover() - (Feature 40b)
+* This class stores the cover function of Cover obstacles
+<br/>Character()
+* This class stores the functions of the characters
+<br/>(Feature 29)
+<br/>Weapon()
+* This class stores the functions of Weapons.
+<br/>Range()
+* This class stores the long range functions of Attack Mode.
+<br/>Melee()
+* This class stores the short range functions of Attack Mode.
+<br/>Pause Menu() - (Feature 6)
+* This class stores the functions of the Pause Menu.
+<br/>InGameOptions() - (Feature 7)
+* This class stores the functions of the In-Game Options Menu.
+<br/>InGameLevel() - (Feature 8)
+* This class stores the functions of the In-Game Level Select Menu.
+<br/>GameOver() - (Feature 9)
+* This class stores the functions of the Game Over Menu.
+<br/>Victory() - (Feature 10)
+* This class stores the functions of the Victory Screen Menu.
 
 
 # Data Design
