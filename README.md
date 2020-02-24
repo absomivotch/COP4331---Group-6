@@ -51,7 +51,7 @@ In addition to providing entertainment, our game can also help improve strategic
 * [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
 * [Demonstration](https://www.youtube.com/watch?v=R6yoIlHlOPM)
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
-* Tests
+* [Tests](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Editor)
 
 
 # Sprint 4
@@ -59,12 +59,14 @@ In addition to providing entertainment, our game can also help improve strategic
 #### Carlos Rodriguez (abisomivotch)
 * Modifying Architecture Design Document
 * Modifying UI Diagram
+* Modifying Trello
 * Modifying Burndown and Velocity Charts
 #### Jacob Rogers (cn7abc)
 * Working on the Coconut Cursor
 #### Mark Pedroso (markp98)
 * Working on character turn switch.
 * Working on team turn switch.
+* Unit Testing
 #### Zachary Chiapperini (zachchiapp)
 * Asset Fetching
 
@@ -77,4 +79,4 @@ In addition to providing entertainment, our game can also help improve strategic
 * [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
 * [Demonstration](https://www.youtube.com/watch?v=wCmCYsNnrv0&feature=youtu.be)
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
-* Automated Tests
+* [Automated Tests](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Editor)
