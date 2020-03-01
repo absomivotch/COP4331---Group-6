@@ -1,4 +1,4 @@
-| ID | User Stories | Actions | Obserations|
+| ID | User Stories | Actions | Observations|
 | :---: | :---: | :---: | :---: |
 | 12a | As a player, I want the game to have a prototype level in which I can play | Open unity, hit play button | See if level model matches concept blueprint |
 | 1e | As a player, I want to be able to quit the game, so that I can properly stop playing | Open unity, hit play button, press Esc key | Check if console log says "GAME QUIT!" |
