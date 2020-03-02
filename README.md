@@ -94,7 +94,8 @@ In addition to providing entertainment, our game can also help improve strategic
 * Working on the Coconut Cursor
 
 #### Mark Pedroso (markp98)
-*
+* Added water texture/physics including mud pool
+* Added an assortment of ground textures to choose from
 
 #### Zachary Chiapperini (zachchiapp)
 * 
