@@ -80,3 +80,34 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Demonstration](https://www.youtube.com/watch?v=wCmCYsNnrv0&feature=youtu.be)
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
 * [Automated Tests](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Editor)
+
+
+
+
+# Sprint 5
+### Team Member Responsibilities:
+#### Carlos Rodriguez (abisomivotch)
+* Coding, Generating, and Designing the Hexagon Grid
+* Monkey Concept Art
+
+#### Jacob Rogers (cn7abc)
+* Working on the Coconut Cursor
+
+#### Mark Pedroso (markp98)
+*
+
+#### Zachary Chiapperini (zachchiapp)
+* 
+
+### Sprint 5 Documentation
+---
+* [Requirements](https://docs.google.com/spreadsheets/d/1QBck0jga7eVdwNA5cF4d4yky5JMCqlwJpjXirBQeAVM/edit#gid=1721495224)
+* [Trello Board](https://trello.com/b/snQUp9cN/group6)
+* [Burndown Chart](https://docs.google.com/spreadsheets/d/1QBck0jga7eVdwNA5cF4d4yky5JMCqlwJpjXirBQeAVM/edit#gid=2081519143)
+* [Velocity Chart](https://docs.google.com/spreadsheets/d/1QBck0jga7eVdwNA5cF4d4yky5JMCqlwJpjXirBQeAVM/edit#gid=837230794)
+* [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
+* [Demonstration]
+* [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
+* [Automated Tests](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Tests)
+* [Manual Tests](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/ManualUnitTests.md)
+   
