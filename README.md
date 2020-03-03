@@ -98,7 +98,7 @@ In addition to providing entertainment, our game can also help improve strategic
 * Added an assortment of ground textures to choose from
 
 #### Zachary Chiapperini (zachchiapp)
-* 
+* Added UI description
 
 ### Sprint 5 Documentation
 ---
