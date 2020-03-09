@@ -121,7 +121,7 @@ In addition to providing entertainment, our game can also help improve strategic
 * Creating and Generating Bandana
 
 #### Jacob Rogers (cn7abc)
-* 
+* Making player selection be done with the cursosr and making a "move" button show up when a monkey is selected.
 
 #### Mark Pedroso (markp98)
 * Finding/creating monkey character models
