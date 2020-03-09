@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1005,6 +1005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 505478879}
   - component: {fileID: 505478878}
+  - component: {fileID: 505478877}
   m_Layer: 0
   m_Name: GameCamera
   m_TagString: MainCamera
@@ -1012,6 +1013,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &505478877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505478876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e28e170cd704494881f8d4410c51586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayLength: 200
+  layermask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!20 &505478878
 Camera:
   m_ObjectHideFlags: 0
@@ -1377,7 +1394,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.17578125, y: 0.0546875, z: 0.05078125, w: -0.0546875}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1487,7 +1504,7 @@ GameObject:
   - component: {fileID: 949931543}
   - component: {fileID: 949931548}
   - component: {fileID: 949931547}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player1SlotC
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1928,7 +1945,7 @@ GameObject:
   - component: {fileID: 1107194769}
   - component: {fileID: 1107194770}
   - component: {fileID: 1107194771}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player1SlotA
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2278,7 +2295,7 @@ GameObject:
   - component: {fileID: 1508536649}
   - component: {fileID: 1508536654}
   - component: {fileID: 1508536653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player1SlotB
   m_TagString: Player
   m_Icon: {fileID: 0}
