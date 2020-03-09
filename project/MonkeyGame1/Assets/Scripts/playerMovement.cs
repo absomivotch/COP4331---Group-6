@@ -13,9 +13,9 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.position += Movement.Calculate(
+        transform.position = transform.position + Movement.Calculate(
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical"),
-            Time.deltaTime);
+            Time.deltaTime)*-1;
     }
 }

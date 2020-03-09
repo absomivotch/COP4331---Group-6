@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6da47a0c4a3454d7785700a5aca5e2ad
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bandana: {fileID: 5658004213531826053, guid: 5ed175ae0b1e142d98833d37a5680355,
+      type: 3}
+  - monkey: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
