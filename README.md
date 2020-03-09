@@ -124,7 +124,9 @@ In addition to providing entertainment, our game can also help improve strategic
 * 
 
 #### Mark Pedroso (markp98)
-*
+* Finding/creating monkey character models
+* Finding cartoony ground textures
+* Updating ManualUnitTests.md
 
 #### Zachary Chiapperini (zachchiapp)
 * 
