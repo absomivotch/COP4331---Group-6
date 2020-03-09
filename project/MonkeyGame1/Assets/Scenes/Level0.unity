@@ -1029,6 +1029,9 @@ MonoBehaviour:
   layermask:
     serializedVersion: 2
     m_Bits: 256
+  playerA: {fileID: 1107194764}
+  playerB: {fileID: 1508536647}
+  playerC: {fileID: 949931541}
 --- !u!20 &505478878
 Camera:
   m_ObjectHideFlags: 0
@@ -1394,7 +1397,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.17578125, y: 0.0546875, z: 0.05078125, w: -0.0546875}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
