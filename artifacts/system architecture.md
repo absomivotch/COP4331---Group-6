@@ -97,15 +97,20 @@ Since this is a game, it is expected to be playable. Also, players of this game 
 
 ### Main Menu
 The UI for Banana Bandana Savanna will greet the user with a Main Menu screen when the game is launched. Below are a series of options for the user to click, including ‘Play’, ‘Level Select’, ‘Options’, and ‘Quit’.
+(Play and Quit functionality fall under Feature 1. The main menu screen itself is Feature 2)
 When the user clicks ‘Play’ on the Main Menu screen they will be taken to the “Character Select” screen. A picture of each of the monkey character models are displayed for users to click on to add them to their respective teams. The size of each team is displayed below the character models for the users’ convenience. At the bottom of this screen a large hexagonal ‘Play’ button becomes clickable and changes color from gray to yellow when the users’ teams are both full.
+(This is Feature 5)
 When the user clicks ‘Level Select’ on the Main Menu screen they will be taken to the “Level Select” screen. This screen contains clickable, numbered circles that represent the different levels or maps the game can be played on. The background of this screen will depict the selected level and will change as new options are selected. A large ‘Ready’ Button will become clickable and change colors from gray to yellow once a level is selected. This ‘Ready’ button will bring the user to the “Character Select” screen. In the bottom left corner of the “Level Select” is a yellow ‘Back’ button, when clicked, brings the user back to the Main Menu screen.
+(This is Feature 4)
 When the user clicks ‘Options’ on the Main Menu screen they will be taken to the “Options” screen. ‘Music’ and ‘SFX’ are displayed in yellow text, followed by respective volume meters for each item. The volume meters consist of 5 banana shaped bars. The number of yellow colored bananas indicated the volume on a scale of 0 to 5. At the bottom of this screen are two clickable buttons: ‘Back’ and ‘Credits’. When the user clicks ‘Credits’ they will be taken to a screen that displays the creators of Banana Bandana Savana. When the user clicks ‘Back’ from the “Options” screen they will be taken to the Main Menu screen.
+(This is Feature 3)
 When the user clicks ‘Quit’ on the Main Menu screen the game will close.
 
 ### Gameplay
-During gameplay the users will control monkey characters on a grid battle ield. Users will select attacks and special moves using buttons appearing in the game window. During gameplay a user may pause the game prompting the UI to display the “Pause” screen. The “Pause” screen will have clickable options to direct the user to the Main Menu or Options screen, and a ‘Quit’ option that will close the game.
+During gameplay the users will control monkey characters(F24) on a grid battle field(F25). Users will select attacks (F28) and special moves (F30) using buttons appearing in the game window.
+During gameplay a user may pause the game prompting the UI to display the “Pause” screen. The “Pause” screen will have clickable options to direct the user to the Main Menu or Options screen, and a ‘Quit’ option that will close the game. (Feature 6-8). The user may lose, prompting the 'Game Over Screen'. (Feature 9)
 At the end of the game, one of two “Victory Screens” will be displayed. A blue “Victory Screen” with the text “Team 1 Victory” in the event Team 1 wins, or a red victory screen with the text “Team 2 Victory” for when Team 2 wins. Both of the “Victory Screens” will contain clickable options to direct the player to the Main Menu or Option screen, and a ‘Quit’ option that will close the game.
-
+(Feature 10 is Victory Screen)
 
 # Resource Management
 Unity manages memory automatically, so this item does not apply to the project.
