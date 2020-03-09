@@ -20,3 +20,4 @@
 | 25 | As a player, I want to see a hexagon grid | Open unity project, hit Play, switch from game view to scene view, and check the hierarchy window.| Under the GridMap object, there should be hexagons in the shape of a grid|
 | 11ab | As a player, I want to see concept art of a monkey character model.| Open unity project, navigate to the Assets folder, navigate to Characters folder within the Assets folder | In the character folder, there should be two pictures ('MonkeyConcept1.png' and 'MonkeyConcept2.png') that both look like the same character from different viewpoints |
 | 11a | As a player, I want to see a monkey appear as character | Open unity, hit play | 3 visible monkey character models |
+| 15g | As a player, I want to see a bandana | Open Unity, open Assets folder, open character folder | a model of a bandana can be seen within |
