@@ -129,7 +129,8 @@ In addition to providing entertainment, our game can also help improve strategic
 * Updating ManualUnitTests.md
 
 #### Zachary Chiapperini (zachchiapp)
-* 
+* Banana model
+* NavMesh Components
 
 ### Sprint 6 Documentation
 ---
