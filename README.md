@@ -143,3 +143,32 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
 * [Automated Tests](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Tests)
 * [Manual Tests](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/ManualUnitTests.md)
+
+
+
+
+# Sprint 7
+### Team Member Responsibilities:
+#### Carlos Rodriguez (abisomivotch)
+* 
+
+#### Jacob Rogers (cn7abc)
+* 
+
+#### Mark Pedroso (markp98)
+* 
+
+#### Zachary Chiapperini (zachchiapp)
+* 
+
+### Sprint 7 Documentation
+---
+* [Requirements]
+* [Trello Board](https://trello.com/b/snQUp9cN/group6)
+* [Burndown Chart]
+* [Velocity Chart]
+* [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
+* [Demonstration]
+* [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
+* [Automated Tests](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Tests)
+* [Manual Tests](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/ManualUnitTests.md)
