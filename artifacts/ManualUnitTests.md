@@ -26,4 +26,4 @@
 | 28b - pgm | As a player, I want the 'Attack' button to vanish after being selected. | Press the attack button after selecteing a character. | See if the attack button dissapears. |
 | 28c | As a player, I want the 'Fire' and 'Melee' buttons to be invisible until the 'Attack' Button is selected. | Press the attack button after selecting a character. | See if the fire and melee buttons appear and make sure they're not there before. |
 | 28b - dsn | As a player, I want there to be a 'Fire' and 'Melee' button displayed in game alongside every character. | Press the attack button after selecting a character. | See if the fire and melee buttons appear. Make sure they are in the correct position which is on the bottom task bar. |
- 
+ | 49 - pgm | As a player, I want to be able to use a xbox 360 controller to move a cursor around | Open and start the Unity game at the Level0 scene. Turn on an xbox 360 controller. Move the control stick.| A sphere on the screen should move in tandem with the controller's control stick. |
