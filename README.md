@@ -154,7 +154,8 @@ In addition to providing entertainment, our game can also help improve strategic
 * Working on Controller Implementation
 
 #### Jacob Rogers (cn7abc)
-* 
+* To finish building the taskbar of buttons displayed when a character is selected.
+* To make the correct buttons appear and disappear depending on where the player is clicking.
 
 #### Mark Pedroso (markp98)
 * Creating working Main Menu
