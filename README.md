@@ -162,7 +162,8 @@ In addition to providing entertainment, our game can also help improve strategic
 * Creating working Options Menu
 
 #### Zachary Chiapperini (zachchiapp)
-* 
+* health bar assets
+* health bar script
 
 ### Sprint 7 Documentation
 ---
