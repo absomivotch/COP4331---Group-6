@@ -27,3 +27,11 @@
 | 28c | As a player, I want the 'Fire' and 'Melee' buttons to be invisible until the 'Attack' Button is selected. | Press the attack button after selecting a character. | See if the fire and melee buttons appear and make sure they're not there before. |
 | 28b - dsn | As a player, I want there to be a 'Fire' and 'Melee' button displayed in game alongside every character. | Press the attack button after selecting a character. | See if the fire and melee buttons appear. Make sure they are in the correct position which is on the bottom task bar. |
  | 49 - pgm | As a player, I want to be able to use a xbox 360 controller to move a cursor around | Open and start the Unity game at the Level0 scene. Turn on an xbox 360 controller. Move the control stick.| A sphere on the screen should move in tandem with the controller's control stick. |
+| 02a - ART | As a player, I want a title on the Main Menu screen that makes it clear what game I'm playing | Open and start the Unity game | Banana Bandana Savanna is displayed at the top of menu |
+| 02b - ART | As a player, I want there to be a 'play' button on the main menu | Open and start the Unity game | A play button is visible on the menu |
+| 02c - ART | As a player, I want there to be a 'options' button on the main menu | Open and start the Unity game | An options button is visible on the menu |
+| 02d - ART | As a player, I want there to be a 'level select' button on the main menu | Open and start the Unity game | A level select button is visible on the menu |
+| 02e - ART | As a player, I want there to be a 'quit' button on the main menu | Open and start the Unity game | A quit button is visible on the menu |
+| 03a - ART | As a player, I want a title on the Options menu that makes it clear this is an options menu | Open and start the Unity game, click on options button | The word "Options" is visible at the top of menu |
+| 03b - ART | As a player, I want to see a Music Volume slider on the Options Screen | Open and start the Unity game, click on options button | A slider labeled volume is present | 
+| 03e - ART | As a player, I want to see a 'Back' button on the Options Screen | Open and start the Unity game, click on options button, the click on back button | The screen switches back to the main menu |
