@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CodeMonkey.Utils;
+//using CodeMonkey.Utils;
 
 public class GameHandler : MonoBehaviour {
-
+    /*
     [SerializeField] private HealthBar healthBar;
 
 	private void Start () {
@@ -27,5 +27,5 @@ public class GameHandler : MonoBehaviour {
                 healthBar.SetColor(Color.red);
             }
         }, .05f);
-	}
+	}*/
 }

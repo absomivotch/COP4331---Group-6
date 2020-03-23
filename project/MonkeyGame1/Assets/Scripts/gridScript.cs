@@ -7,21 +7,22 @@ public class gridScript : MonoBehaviour
     public GameObject hexPrefab;
     public GameObject hexGrid;
 
-    int width = 130;
-    int height = 50;
+    int width = 33;
+    int height = 13;
     int x;
     int y;
 
-    float xOffset = 0.855f * 2.0f;
-    float zOffset = 1.523f;
+    float xOffset = 0.855f * 8.0f;
+    float zOffset = 1.523f * 4.0f;
 
     float xPosition;
 
     public bool gridActive;
 
-    void Start()
+    void Awake()
     {
-       for(x=0; x<width; x++)
+
+        for (x = 0; x < width; x++)
         {
             for (y = 0; y < height; y++)
             {
@@ -34,7 +35,7 @@ public class gridScript : MonoBehaviour
                 }
                 hexGrid = (GameObject)Instantiate(
                     hexPrefab,
-                    new Vector3(xPosition, 0.2f, y * zOffset),
+                    new Vector3(xPosition, 0.8f, y * zOffset),
                     Quaternion.identity
                     );
                 hexGrid.name = "Tile_" + x + "_" + y;
@@ -49,19 +50,20 @@ public class gridScript : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown(KeyCode.G)) { 
+        if (Input.GetKeyDown(KeyCode.G))
+        {
             if (gridActive == true)
             {
-                gameObject.transform.position = new Vector3(0,100,0);
+                gameObject.transform.position = new Vector3(0, 100, 0);
                 gridActive = false;
             }
             else
             {
-                gameObject.transform.position = new Vector3(0,0,0);
+                gameObject.transform.position = new Vector3(0, 0, 0);
                 gridActive = true;
             }
         }
-    
-        
+
+
     }
 }

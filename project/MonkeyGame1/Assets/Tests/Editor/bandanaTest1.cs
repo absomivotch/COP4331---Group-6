@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NUnit.Framework;
-using UnityEngine;
 using UnityEngine.TestTools;
 
 public class bandanaTest1 : MonoBehaviour
