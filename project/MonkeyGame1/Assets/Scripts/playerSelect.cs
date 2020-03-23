@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class playerSelect : MonoBehaviour
 {
@@ -54,13 +55,16 @@ public class playerSelect : MonoBehaviour
                
             }
 
-            else
+            else // clicking away
             {
-                    playerA.GetComponent<playerMovement>().enabled = false;
-                    playerB.GetComponent<playerMovement>().enabled = false;
-                    playerC.GetComponent<playerMovement>().enabled = false;
+                    if(moveButton.GetComponentInChildren<Text>().text == "Move"){
+                         moveButton.SetActive(false);
 
-                    moveButton.SetActive(false);
+                         playerA.GetComponent<playerMovement>().enabled = false;
+                         playerB.GetComponent<playerMovement>().enabled = false;
+                         playerC.GetComponent<playerMovement>().enabled = false;
+                    }
+                   
             }
         }
     }
