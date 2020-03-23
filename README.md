@@ -150,7 +150,8 @@ In addition to providing entertainment, our game can also help improve strategic
 # Sprint 7
 ### Team Member Responsibilities:
 #### Carlos Rodriguez (abisomivotch)
-* 
+* Working on Grid Placement
+* Working on Controller Implementation
 
 #### Jacob Rogers (cn7abc)
 * 
