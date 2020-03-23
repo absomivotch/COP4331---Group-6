@@ -156,7 +156,8 @@ In addition to providing entertainment, our game can also help improve strategic
 * 
 
 #### Mark Pedroso (markp98)
-* 
+* Creating working Main Menu
+* Creating working Options Menu
 
 #### Zachary Chiapperini (zachchiapp)
 * 
