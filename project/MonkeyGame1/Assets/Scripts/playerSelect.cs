@@ -9,7 +9,7 @@ public class playerSelect : MonoBehaviour
     public float rayLength;
     public LayerMask layermask;
 
-    public GameObject playerA, playerB, playerC, moveButton;
+    public GameObject playerA, playerB, playerC, moveButton, attackButton, meleButton, fireButton;
 
      void Start()
     {
@@ -31,6 +31,8 @@ public class playerSelect : MonoBehaviour
                if(hit.collider.name == "player1SlotA")
                {
                     moveButton.SetActive(true);
+                    attackButton.SetActive(true);
+
 
                     playerA.GetComponent<playerMovement>().enabled = true;
                     playerB.GetComponent<playerMovement>().enabled = false;
@@ -39,6 +41,7 @@ public class playerSelect : MonoBehaviour
                else if(hit.collider.name == "player1SlotB")
                {
                     moveButton.SetActive(true);
+                    attackButton.SetActive(true);
 
                     playerA.GetComponent<playerMovement>().enabled = false;
                     playerB.GetComponent<playerMovement>().enabled = true;
@@ -47,6 +50,7 @@ public class playerSelect : MonoBehaviour
                else if(hit.collider.name == "player1SlotC")
                {
                     moveButton.SetActive(true);
+                    attackButton.SetActive(true);
                     
                     playerA.GetComponent<playerMovement>().enabled = false;
                     playerB.GetComponent<playerMovement>().enabled = false;
@@ -59,7 +63,10 @@ public class playerSelect : MonoBehaviour
             {
                     if(moveButton.GetComponentInChildren<Text>().text == "Move"){
                          moveButton.SetActive(false);
-
+                         attackButton.SetActive(false);
+                         fireButton.SetActive(false);
+                         meleButton.SetActive(false);
+                         
                          playerA.GetComponent<playerMovement>().enabled = false;
                          playerB.GetComponent<playerMovement>().enabled = false;
                          playerC.GetComponent<playerMovement>().enabled = false;
