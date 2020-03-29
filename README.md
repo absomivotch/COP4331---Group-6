@@ -190,7 +190,7 @@ In addition to providing entertainment, our game can also help improve strategic
 
 #### Mark Pedroso (markp98)
 * Creating a pause menu
-* Adding background music to main menu
+* Adding background music to main menu and in-game
 
 #### Zachary Chiapperini (zachchiapp)
 * 
