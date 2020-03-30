@@ -194,7 +194,7 @@ In addition to providing entertainment, our game can also help improve strategic
 * Adding background music to main menu and in-game
 
 #### Zachary Chiapperini (zachchiapp)
-* 
+* Working on health bar scripts and sprite
 
 ### Sprint 8 Documentation
 ---
