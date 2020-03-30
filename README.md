@@ -183,7 +183,7 @@ In addition to providing entertainment, our game can also help improve strategic
 # Sprint 8
 ### Team Member Responsibilities:
 #### Carlos Rodriguez (abisomivotch)
-* 
+* Working on Changing Grid Color
 
 #### Jacob Rogers (cn7abc)
 * 
