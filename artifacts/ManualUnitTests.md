@@ -35,3 +35,10 @@
 | 03a - ART | As a player, I want a title on the Options menu that makes it clear this is an options menu | Open and start the Unity game, click on options button | The word "Options" is visible at the top of menu |
 | 03b - ART | As a player, I want to see a Music Volume slider on the Options Screen | Open and start the Unity game, click on options button | A slider labeled volume is present | 
 | 03e - ART | As a player, I want to see a 'Back' button on the Options Screen | Open and start the Unity game, click on options button, the click on back button | The screen switches back to the main menu |
+| 06 - ART | As a player, I want a simple Pause Menu in the game | Open and start game, then press esc key | Pause menu is shown |
+| 06 - DSN | As a player, I want to see a Pause Menu when I 'pause' the game and access various options | Open and start game, then press esc key | Various options are presented for the user to select from |
+| 06b - ART | As a player, I want a 'resume' button on the pause menu | Open and start game, then press esq key | Resume button is present |
+| 06c - ART | As a player, I want an 'options' button on the pause menu | Open and start game, then press esc key | Options button is present |
+| 06e - ART | As a player, I want a 'Back To Main Menu' button on the pause menu | Open and start game, then press esc key | Menu button is present |
+| 16a - DSN | As a player, I want to hear jungle-themed music while playing level 0 | Open and start game, press play | Jungle music can be heard |
+| 16b - DSN | As a player, I want to hear jungle-themed music while on the main menu | Open and start game | Jungle music can be heard when mainmenu screen is shown |
