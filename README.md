@@ -187,7 +187,7 @@ In addition to providing entertainment, our game can also help improve strategic
 
 #### Jacob Rogers (cn7abc)
 * To work on movememnt of the characters: To first be able to make characters teleport from one grid location to another, and to set movement costs in the grid map.
-* To start work/resaerch on pathfinding and a sliding animation.
+* To start work/research on pathfinding and a sliding animation.
 
 #### Mark Pedroso (markp98)
 * Creating a pause menu
