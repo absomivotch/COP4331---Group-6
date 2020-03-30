@@ -203,7 +203,7 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Burndown Chart](https://docs.google.com/spreadsheets/d/1AdzkpnSR1nSANsvtp5rJp2FNWdyRxtBgqVlIl3h0utA/edit#gid=2081519143)
 * [Velocity Chart](https://docs.google.com/spreadsheets/d/1AdzkpnSR1nSANsvtp5rJp2FNWdyRxtBgqVlIl3h0utA/edit#gid=837230794)
 * [System Architecture](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/system%20architecture.md)
-* [Demonstration] (https://youtu.be/B7s3h27DH2s)
+* [Demonstration](https://youtu.be/B7s3h27DH2s)
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
 * [Automated Tests](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Tests)
 * [Manual Tests](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/ManualUnitTests.md)
