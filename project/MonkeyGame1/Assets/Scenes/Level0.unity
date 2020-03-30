@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1574,7 +1574,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.1121e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 6.4e-44, y: 6e-45, z: 8e-45, w: 1.1754945e-38}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1648,6 +1648,7 @@ MonoBehaviour:
   attackButton: {fileID: 2033685146}
   meleButton: {fileID: 1365644058}
   fireButton: {fileID: 1533459858}
+  currentCharacter: 
 --- !u!20 &902191739
 Camera:
   m_ObjectHideFlags: 0
@@ -3444,9 +3445,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbbb65eac43724d42813884b5fc766d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hexTypes:
+  - name: Impassable
+    isWalkable: 0
+    movementCost: 0
+  - name: Normal
+    isWalkable: 0
+    movementCost: 0
+  - name: Slow
+    isWalkable: 0
+    movementCost: 0
   hexPrefab: {fileID: 2572130544778075152, guid: c932ec68bfb330e4b8ace3aa34c10cdb,
     type: 3}
   hexGrid: {fileID: 0}
+  selectedCharacter: {fileID: 0}
+  gameCamera: {fileID: 902191736}
+  moveButton: {fileID: 1124447859}
+  gridObject: {fileID: 0}
   gridActive: 0
 --- !u!4 &1578003857
 Transform:

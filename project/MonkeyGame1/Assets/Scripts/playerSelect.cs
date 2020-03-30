@@ -10,6 +10,7 @@ public class playerSelect : MonoBehaviour
     public LayerMask layermask;
 
     public GameObject playerA, playerB, playerC, moveButton, attackButton, meleButton, fireButton;
+    public string currentCharacter;
 
      void Start()
     {
@@ -26,13 +27,14 @@ public class playerSelect : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             
+            // Click the character you want to play as, esnure that you're not already in movement mode.
             if(Physics.Raycast(ray, out hit, rayLength, layermask))
             {
                if(hit.collider.name == "player1SlotA")
                {
+                    currentCharacter = "A";
                     moveButton.SetActive(true);
                     attackButton.SetActive(true);
-
 
                     playerA.GetComponent<playerMovement>().enabled = true;
                     playerB.GetComponent<playerMovement>().enabled = false;
@@ -40,6 +42,7 @@ public class playerSelect : MonoBehaviour
                }
                else if(hit.collider.name == "player1SlotB")
                {
+                    currentCharacter = "B";
                     moveButton.SetActive(true);
                     attackButton.SetActive(true);
 
@@ -49,6 +52,7 @@ public class playerSelect : MonoBehaviour
                }
                else if(hit.collider.name == "player1SlotC")
                {
+                   currentCharacter = "C";
                     moveButton.SetActive(true);
                     attackButton.SetActive(true);
                     
