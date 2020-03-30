@@ -186,7 +186,7 @@ In addition to providing entertainment, our game can also help improve strategic
 * Working on Changing Grid Color
 
 #### Jacob Rogers (cn7abc)
-* To work on movememnt of the characters: To first be able to make characters telaport from one grid location to another, and to set movement costs in the grid map.
+* To work on movememnt of the characters: To first be able to make characters teleport from one grid location to another, and to set movement costs in the grid map.
 * To start work/resaerch on pathfinding and a sliding animation.
 
 #### Mark Pedroso (markp98)
