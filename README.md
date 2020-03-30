@@ -176,7 +176,6 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
 * [Automated Tests](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Tests)
 * [Manual Tests](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/ManualUnitTests.md)
-<<<<<<< HEAD
 
 
 
@@ -207,5 +206,3 @@ In addition to providing entertainment, our game can also help improve strategic
 * [Code](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Scripts)
 * [Automated Tests](https://github.com/absomivotch/COP4331---Group-6/tree/master/project/MonkeyGame1/Assets/Tests)
 * [Manual Tests](https://github.com/absomivotch/COP4331---Group-6/blob/master/artifacts/ManualUnitTests.md)
-=======
->>>>>>> parent of 530e517... Merge branch 'master' of https://github.com/absomivotch/COP4331---Group-6
