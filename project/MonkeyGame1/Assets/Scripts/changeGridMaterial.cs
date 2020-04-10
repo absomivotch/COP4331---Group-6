@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+
 public class changeGridMaterial : MonoBehaviour
 {
 
@@ -15,12 +16,13 @@ public class changeGridMaterial : MonoBehaviour
     GameObject grid;
     GameObject gridObject;
     int i, j;
-
+string tmp;
     public enum GridColor
     {
         yellow = 0,
         blue = 1,
-        red = 2
+        red = 2,
+        green = 3
     }
 
 
@@ -65,8 +67,10 @@ public class changeGridMaterial : MonoBehaviour
         else
         {  // Enter Movement mode, grid becomes blue.
             moveButton.GetComponentInChildren<Text>().text = "Confirm Move";
+            gridScript gridScript = GameObject.Find("GridMap").GetComponent<gridScript>();
+            gridPlacement gridPlacement = GameObject.Find("GridMap").GetComponent<gridPlacement>();
             isBlue = true;
-            
+
             for (i = 0; i <= 32; i++)
             {
                 for (j = 0; j <= 12; j++)
@@ -85,6 +89,24 @@ public class changeGridMaterial : MonoBehaviour
                     }
                     exemptHex = false;
                 }
+            }
+            switch (gridScript.selectedCharacter.name)
+            {
+                
+                case "player1SlotA":
+                    tmp = gridPlacement.leftA;
+                    if (tmp == "")
+                    {
+                        Debug.LogError("String is empty");
+                    }
+                    displayRangeofMovement(gridPlacement.leftA);
+                    break;
+                case "player1SlotB":
+                    displayRangeofMovement(gridPlacement.leftB);
+                    break;
+                case "player1SlotC":
+                    displayRangeofMovement(gridPlacement.leftC);
+                    break;
             }
         }
 
@@ -105,6 +127,63 @@ public class changeGridMaterial : MonoBehaviour
         grid = GameObject.Find("GridMap");
         gridObject = grid.transform.Find("Tile_" + x + "_" + y).Find("hex_frame").gameObject;
         gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.blue];
+    }
+
+    public void displayRangeofMovement(string currentPosition)
+    {
+        int x, y;
+        GameObject gridObject, grid;
+
+        if (currentPosition == "")
+        {
+            Debug.LogError("String is empty");
+            return;
+        }
+
+        char xChar = currentPosition[5];
+        char yChar = currentPosition[7];
+        x = (int)char.GetNumericValue(xChar);
+        y = (int)char.GetNumericValue(yChar);
+
+        grid = GameObject.Find("GridMap");
+        gridObject = grid.transform.Find("Tile_" + (x - 1) + "_" + (y - 3)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + x + "_" + (y - 3)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x + 1) + "_" + (y - 3)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y - 3)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y - 2)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + (y - 1)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + y).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + (y + 1)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y + 2)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y + 3)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x + 1) + "_" + (y + 3)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + x + "_" + (y + 3)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x - 1) + "_" + (y + 3)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y + 2)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y + 1)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x - 3) + "_" + y).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y - 1)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y - 2)).Find("hex_frame").gameObject;
+        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+
+
     }
 }
 

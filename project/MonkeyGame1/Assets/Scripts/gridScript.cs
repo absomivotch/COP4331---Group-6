@@ -14,7 +14,8 @@ public class gridScript : MonoBehaviour
     public bool gridActive, choseATile = false;
     Node[,] graph;
     public changeGridMaterial changeGridMaterial;
- 
+    string centerOfRadius;
+
 
 
     public enum TerrainType
@@ -152,13 +153,31 @@ public class gridScript : MonoBehaviour
     {
         if (moveButton.GetComponentInChildren<Text>().text == "Confirm Move")
         {
+            // Move.
             selectedCharacter.transform.position = gridObject.transform.Find(hexName).position;
+            
+            // Update position.
+            gridPlacement gridPlacement = GameObject.Find("GridMap").GetComponent<gridPlacement>();
+            switch (selectedCharacter.name)
+            {
+                case "player1SlotA":
+                    gridPlacement.leftA = hexName;
+                    break;
+                case "player1SlotB":
+                    gridPlacement.leftB = hexName;
+                    break;
+                case "player1SlotC":
+                    gridPlacement.leftC = hexName;
+                    break;
+            }
         }
     }
     public void MoveCurrentCharacter(int x, int y)
     {
         // Determine which character is currently selected.
+        gridPlacement gridPlacement = GameObject.Find("GridMap").GetComponent<gridPlacement>();
         playerSelect playerSelect = gameCamera.GetComponent<playerSelect>();
+        changeGridMaterial changeGridMaterial = GameObject.Find("GameManager").GetComponent<changeGridMaterial>();
         gridObject = GameObject.Find("GridMap");
 
         if (playerSelect.currentCharacter == "A")
@@ -181,15 +200,11 @@ public class gridScript : MonoBehaviour
             selectedCharacter = null;
         }
 
-
-        // selectedCharacter.GetComponent<characterPosition>().currentPath = null;
-
         // If in move mode, then move the player.
         if (moveButton.GetComponentInChildren<Text>().text == "Confirm Move")
         {
+            
             // Highlight selected hex (where the user wants to move).
-          
-            changeGridMaterial = GameObject.Find("GameManager").GetComponent<changeGridMaterial>();
             if (choseATile == false)
             {
                 changeGridMaterial.exemptHexName = "Tile_" + x + "_" + y + "";
@@ -198,13 +213,15 @@ public class gridScript : MonoBehaviour
                 oldX = x;
                 oldY = y;
             }
-            else{
+            else
+            {
                 changeGridMaterial.changeHexBlue(oldX, oldY);
                 changeGridMaterial.exemptHexName = "Tile_" + x + "_" + y + "";
                 changeGridMaterial.changeHexRed(x, y);
                 oldX = x;
                 oldY = y;
             }
+
 
 
             /*    

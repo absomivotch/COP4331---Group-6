@@ -2737,6 +2737,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 312b30a39024151458714739e1b2d15e, type: 2}
   - {fileID: 2100000, guid: 3a6910fa05b1b6d4cb6a69ffaa030468, type: 2}
   - {fileID: 2100000, guid: 50f9352ed966d0345b19c549e53773e0, type: 2}
+  - {fileID: 2100000, guid: 9cdaa1f6de276c44baf398c7fff93af9, type: 2}
   isBlue: 0
   exemptHex: 0
   exemptHexName: 
@@ -3500,7 +3501,6 @@ MonoBehaviour:
   gridActive: 0
   choseATile: 0
   changeGridMaterial: {fileID: 0}
-  numberOfChosenTiles: 0
 --- !u!4 &1578003857
 Transform:
   m_ObjectHideFlags: 0
@@ -3566,6 +3566,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1da4e420cc87804f80ff2cedb4b0b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftA: 
+  leftB: 
+  leftC: 
+  rightA: 
+  rightB: 
+  rightC: 
 --- !u!1 &1584084975
 GameObject:
   m_ObjectHideFlags: 0
