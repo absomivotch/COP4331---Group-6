@@ -8,13 +8,13 @@ public class gridScript : MonoBehaviour
 {
     public HexType[] hexTypes;
     public GameObject hexPrefab, hexGrid, selectedCharacter, gameCamera, moveButton, gridObject, selectedHex, selectedHexChild;
-    int width = 33, height = 13, x, y;
+    int width = 33, height = 13, x, y, oldX, oldY;
     int[,] tiles;
     float xPosition, xOffset = 0.855f * 8.0f, zOffset = 1.523f * 4.0f;
-    public bool gridActive;
+    public bool gridActive, choseATile = false;
     Node[,] graph;
     public changeGridMaterial changeGridMaterial;
-    public int numberOfChosenTiles = 0;
+ 
 
 
     public enum TerrainType
@@ -148,7 +148,13 @@ public class gridScript : MonoBehaviour
         }
     }
 
-
+    public void warp(string hexName)
+    {
+        if (moveButton.GetComponentInChildren<Text>().text == "Confirm Move")
+        {
+            selectedCharacter.transform.position = gridObject.transform.Find(hexName).position;
+        }
+    }
     public void MoveCurrentCharacter(int x, int y)
     {
         // Determine which character is currently selected.
@@ -173,8 +179,6 @@ public class gridScript : MonoBehaviour
         else
         {
             selectedCharacter = null;
-            numberOfChosenTiles = 0;
-            Debug.Log("number of chosen tiles = 0");
         }
 
 
@@ -184,34 +188,25 @@ public class gridScript : MonoBehaviour
         if (moveButton.GetComponentInChildren<Text>().text == "Confirm Move")
         {
             // Highlight selected hex (where the user wants to move).
-            if (numberOfChosenTiles < 1)
+          
+            changeGridMaterial = GameObject.Find("GameManager").GetComponent<changeGridMaterial>();
+            if (choseATile == false)
             {
-                changeGridMaterial = GameObject.Find("GameManager").GetComponent<changeGridMaterial>();
-
-                switch(playerSelect.currentCharacter){
-                    case "A":
-                        changeGridMaterial.exemptHexs[0] = "Tile_" + x + "_" + y + "";
-                        break;
-                    case "B":
-                        changeGridMaterial.exemptHexs[1] = "Tile_" + x + "_" + y + "";
-                        break;
-                    case "C":
-                        changeGridMaterial.exemptHexs[2] = "Tile_" + x + "_" + y + "";
-                        break;
-                    default:
-                        Debug.Log("no selected chacter");
-                        break;
-                }
-                changeGridMaterial.changeHexGreen(x, y);
-                           
-                numberOfChosenTiles++;
-                Debug.Log("number of chosen tiles = 1");
+                changeGridMaterial.exemptHexName = "Tile_" + x + "_" + y + "";
+                changeGridMaterial.changeHexRed(x, y);
+                choseATile = true;
+                oldX = x;
+                oldY = y;
+            }
+            else{
+                changeGridMaterial.changeHexBlue(oldX, oldY);
+                changeGridMaterial.exemptHexName = "Tile_" + x + "_" + y + "";
+                changeGridMaterial.changeHexRed(x, y);
+                oldX = x;
+                oldY = y;
             }
 
 
-
-            // to warp!!:
-            // selectedCharacter.transform.position = gridObject.transform.Find("Tile_" + x + "_" + y).position;
             /*    
                  // Dijkstra's Algorithm for pathfinding!!
                      Dictionary<Node, float> dist = new Dictionary<Node, float>();

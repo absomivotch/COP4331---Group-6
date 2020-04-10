@@ -2658,6 +2658,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1578003856}
+        m_MethodName: warp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1145378884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,16 +2732,14 @@ MonoBehaviour:
     type: 3}
   hexPrefabChild: {fileID: 0}
   attackButton: {fileID: 2033685146}
+  specificHex: {fileID: 0}
   materialList:
   - {fileID: 2100000, guid: 312b30a39024151458714739e1b2d15e, type: 2}
   - {fileID: 2100000, guid: 3a6910fa05b1b6d4cb6a69ffaa030468, type: 2}
-  - {fileID: 2100000, guid: c960bd41d840b8e4e9114e3cbc53a425, type: 2}
+  - {fileID: 2100000, guid: 50f9352ed966d0345b19c549e53773e0, type: 2}
   isBlue: 0
   exemptHex: 0
-  exemptHexs:
-  - 
-  - 
-  - 
+  exemptHexName: 
 --- !u!23 &1145378888
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3489,6 +3498,7 @@ MonoBehaviour:
   selectedHex: {fileID: 0}
   selectedHexChild: {fileID: 0}
   gridActive: 0
+  choseATile: 0
   changeGridMaterial: {fileID: 0}
   numberOfChosenTiles: 0
 --- !u!4 &1578003857
