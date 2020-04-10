@@ -10,7 +10,7 @@ public class playerSelect : MonoBehaviour
     public LayerMask layermask;
 
     public GameObject playerA, playerB, playerC, moveButton, attackButton, meleButton, fireButton;
-    public string currentCharacter;
+    public string currentCharacter = "none";
 
      void Start()
     {
@@ -35,10 +35,6 @@ public class playerSelect : MonoBehaviour
                     currentCharacter = "A";
                     moveButton.SetActive(true);
                     attackButton.SetActive(true);
-
-                    playerA.GetComponent<playerMovement>().enabled = true;
-                    playerB.GetComponent<playerMovement>().enabled = false;
-                    playerC.GetComponent<playerMovement>().enabled = false;
                }
                else if(hit.collider.name == "player1SlotB")
                {
@@ -46,19 +42,12 @@ public class playerSelect : MonoBehaviour
                     moveButton.SetActive(true);
                     attackButton.SetActive(true);
 
-                    playerA.GetComponent<playerMovement>().enabled = false;
-                    playerB.GetComponent<playerMovement>().enabled = true;
-                    playerC.GetComponent<playerMovement>().enabled = false;
                }
                else if(hit.collider.name == "player1SlotC")
                {
                    currentCharacter = "C";
                     moveButton.SetActive(true);
                     attackButton.SetActive(true);
-                    
-                    playerA.GetComponent<playerMovement>().enabled = false;
-                    playerB.GetComponent<playerMovement>().enabled = false;
-                    playerC.GetComponent<playerMovement>().enabled = true;
                }
                
             }
@@ -70,10 +59,8 @@ public class playerSelect : MonoBehaviour
                          attackButton.SetActive(false);
                          fireButton.SetActive(false);
                          meleButton.SetActive(false);
-                         
-                         playerA.GetComponent<playerMovement>().enabled = false;
-                         playerB.GetComponent<playerMovement>().enabled = false;
-                         playerC.GetComponent<playerMovement>().enabled = false;
+
+                         currentCharacter = "none";
                     }
                    
             }
