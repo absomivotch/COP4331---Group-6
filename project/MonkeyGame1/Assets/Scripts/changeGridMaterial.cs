@@ -16,7 +16,7 @@ public class changeGridMaterial : MonoBehaviour
     GameObject grid;
     GameObject gridObject;
     int i, j;
-string tmp;
+    string tmp;
     public enum GridColor
     {
         yellow = 0,
@@ -31,20 +31,15 @@ string tmp;
     public void changeMaterial()
     {
         exemptHex = false;
-
-        Debug.Log("changeMaterial Called");
-
         grid = GameObject.Find("GridMap");
 
         // The attack button should be hidden if in movement mode, maybe in the future there should be a stand-alone script for this.
         attackButton.SetActive(false);
-
         hexPrefabChild = hexPrefab.transform.Find("hex_frame").gameObject;
 
         // Return to normal mode, grid becomes yellow.
         if (moveButton.GetComponentInChildren<Text>().text == "Confirm Move")
         {
-
             gridScript gridScript = GameObject.Find("GridMap").GetComponent<gridScript>();
             gridScript.warp(exemptHexName);
             gridScript.choseATile = false;
@@ -90,15 +85,10 @@ string tmp;
                     exemptHex = false;
                 }
             }
+
             switch (gridScript.selectedCharacter.name)
             {
-                
                 case "player1SlotA":
-                    tmp = gridPlacement.leftA;
-                    if (tmp == "")
-                    {
-                        Debug.LogError("String is empty");
-                    }
                     displayRangeofMovement(gridPlacement.leftA);
                     break;
                 case "player1SlotB":
@@ -109,14 +99,15 @@ string tmp;
                     break;
             }
         }
-
     }
+
     public void changeHexRed(int x, int y)
     {
         GameObject gridObject, grid;
 
         grid = GameObject.Find("GridMap");
         gridObject = grid.transform.Find("Tile_" + x + "_" + y).Find("hex_frame").gameObject;
+
         gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
     }
 
@@ -145,46 +136,243 @@ string tmp;
         x = (int)char.GetNumericValue(xChar);
         y = (int)char.GetNumericValue(yChar);
 
+        Debug.Log("center = ( " + x + "," + y + ")");
+
         grid = GameObject.Find("GridMap");
-        gridObject = grid.transform.Find("Tile_" + (x - 1) + "_" + (y - 3)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + x + "_" + (y - 3)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x + 1) + "_" + (y - 3)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y - 3)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y - 2)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + (y - 1)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + y).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + (y + 1)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y + 2)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y + 3)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x + 1) + "_" + (y + 3)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + x + "_" + (y + 3)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x - 1) + "_" + (y + 3)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y + 2)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y + 1)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x - 3) + "_" + y).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y - 1)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
-        gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y - 2)).Find("hex_frame").gameObject;
-        gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.green];
+        // For odd numbered rows:
+        if (y % 2 != 0)
+        {
+            if (checkCoordsOnBoader(x - 1, y - 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 1) + "_" + (y - 3)).Find("hex_frame").gameObject;
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x, y - 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + x + "_" + (y - 3)).Find("hex_frame").gameObject;
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 1, y - 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 1) + "_" + (y - 3)).Find("hex_frame").gameObject;
 
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 2, y - 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y - 3)).Find("hex_frame").gameObject;
 
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 2, y - 2))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y - 2)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 3, y - 1))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + (y - 1)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 3, y))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + y).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 3, y + 1))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + (y + 1)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 2, y + 2))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y + 2)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 2, y + 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y + 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 1, y + 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 1) + "_" + (y + 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x, y + 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + x + "_" + (y + 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 1, y + 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 1) + "_" + (y + 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 2, y + 2))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y + 2)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 2, y + 1))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y + 1)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 3, y))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 3) + "_" + y).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 2, y - 1))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y - 1)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 2, y - 2))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y - 2)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+        }
+        // For even rows:
+        else
+        {
+            if (checkCoordsOnBoader(x - 1, y - 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 1) + "_" + (y - 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x, y - 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + x + "_" + (y - 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 1, y - 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 1) + "_" + (y - 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x, y - 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y - 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 2, y - 2))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y - 2)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 2, y - 1))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y - 1)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 3, y))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 3) + "_" + y).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 1, y + 1))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y + 1)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 2, y + 2))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 2) + "_" + (y + 2)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x + 1, y + 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x + 1) + "_" + (y + 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x, y + 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + x + "_" + (y + 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 1, y + 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 1) + "_" + (y + 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 2, y + 2))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y + 2)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 3, y + 1))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 3) + "_" + (y + 1)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 3, y))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 3) + "_" + y).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 3, y - 1))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 3) + "_" + (y - 1)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 2, y - 2))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y - 2)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+            if (checkCoordsOnBoader(x - 2, y + 3))
+            {
+                gridObject = grid.transform.Find("Tile_" + (x - 2) + "_" + (y + 3)).Find("hex_frame").gameObject;
+
+                gridObject.GetComponent<MeshRenderer>().material = materialList[(int)GridColor.red];
+            }
+        }
+    }
+
+    bool checkCoordsOnBoader(int x, int y)
+    {
+        if (x > 0 && x < 33 & y > 0 && y < 13)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
-
 
