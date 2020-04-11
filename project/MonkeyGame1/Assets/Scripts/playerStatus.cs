@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerStatus : MonoBehaviour
 {
@@ -15,8 +16,8 @@ public class playerStatus : MonoBehaviour
     public int turn;
     void Start()
     {
+        GameObject.Find("InfoBar").GetComponentInChildren<Text>().text = "Left's Turn, Double click to select chacaters";
         turn = 0;
-        Debug.Log("turn 0");
         // Initalize the players' states.
         leftA.moved = false;
         leftA.attacked = false;
@@ -53,12 +54,12 @@ public class playerStatus : MonoBehaviour
     public void nextTurn(){
         if(turn == 0){
             turn = 1;
-            Debug.Log("turn 1");
+            GameObject.Find("InfoBar").GetComponentInChildren<Text>().text = "Right's Turn";
         }
         else
         {
             turn = 0;
-            Debug.Log("turn 0");
+           GameObject.Find("InfoBar").GetComponentInChildren<Text>().text = "Left's Turn";
         }
         leftA.moved = false;
         leftA.attacked = false;

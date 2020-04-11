@@ -217,6 +217,7 @@ public class gridScript : MonoBehaviour
 
             // Move.
             selectedCharacter.transform.position = gridObject.transform.Find(hexName).position;
+            infoBar.GetComponentInChildren<Text>().text = "";
 
             // Update position.
             switch (selectedCharacter.name)
@@ -264,17 +265,17 @@ public class gridScript : MonoBehaviour
             if (playerSelect.currentCharacter == "A")
             {
                 selectedCharacter = GameObject.Find("player1SlotA");
-                Debug.Log("selected A");
+                infoBar.GetComponentInChildren<Text>().text = "Left Player A Selected";
             }
             else if (playerSelect.currentCharacter == "B")
             {
                 selectedCharacter = GameObject.Find("player1SlotB");
-                Debug.Log("selected B");
+                infoBar.GetComponentInChildren<Text>().text = "Left Player B Selected";
             }
             else if (playerSelect.currentCharacter == "C")
             {
                 selectedCharacter = GameObject.Find("player1SlotC");
-                Debug.Log("selected C");
+                infoBar.GetComponentInChildren<Text>().text = "Left Player C Selected";
             }
             else
             {
@@ -286,17 +287,17 @@ public class gridScript : MonoBehaviour
             if (playerSelect.currentCharacter == "A2")
             {
                 selectedCharacter = GameObject.Find("player2SlotA");
-                Debug.Log("selected A2");
+                infoBar.GetComponentInChildren<Text>().text = "Right Player A Selected";
             }
             else if (playerSelect.currentCharacter == "B2")
             {
                 selectedCharacter = GameObject.Find("player2SlotB");
-                Debug.Log("selected B2");
+                infoBar.GetComponentInChildren<Text>().text = "Right Player B Selected";
             }
             else if (playerSelect.currentCharacter == "C2")
             {
                 selectedCharacter = GameObject.Find("player2SlotC");
-                Debug.Log("selected C2");
+                infoBar.GetComponentInChildren<Text>().text = "Right Player C Selected";
             }
             else
             {

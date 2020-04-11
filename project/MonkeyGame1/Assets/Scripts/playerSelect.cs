@@ -21,6 +21,7 @@ public class playerSelect : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             GameObject infoBar = GameObject.Find("InfoBar");
             playerStatus playerStatus = GameObject.Find("GridMap").GetComponent<playerStatus>();
+            gridScript gridScript = GameObject.Find("GridMap").GetComponent<gridScript>();
 
             // Click the character you want to play as, esnure that you're not already in movement mode.
             if (Physics.Raycast(ray, out hit, rayLength, layermask))
@@ -30,64 +31,81 @@ public class playerSelect : MonoBehaviour
                     if (hit.collider.name == "player1SlotA")
                     {
                         currentCharacter = "A";
-                        infoBar.GetComponentInChildren<Text>().text = "";
-                        if (playerStatus.leftA.moved == false)
-                            moveButton.SetActive(true);
-                        if (playerStatus.leftA.attacked == false)
-                            attackButton.SetActive(true);
+
+                        if (gridScript.selectedCharacter == GameObject.Find("player1SlotA"))
+                        {
+                            if (playerStatus.leftA.moved == false)
+                                moveButton.SetActive(true);
+                            if (playerStatus.leftA.attacked == false)
+                                attackButton.SetActive(true);
+                        }
                     }
                     else if (hit.collider.name == "player1SlotB")
                     {
                         currentCharacter = "B";
-                        infoBar.GetComponentInChildren<Text>().text = "";
-                        if (playerStatus.leftB.moved == false)
-                            moveButton.SetActive(true);
-                        if (playerStatus.leftB.attacked == false)
-                            attackButton.SetActive(true);
 
+                        if (gridScript.selectedCharacter == GameObject.Find("player1SlotB"))
+                        {
+                            if (playerStatus.leftB.moved == false)
+                                moveButton.SetActive(true);
+                            if (playerStatus.leftB.attacked == false)
+                                attackButton.SetActive(true);
+                        }
                     }
                     else if (hit.collider.name == "player1SlotC")
                     {
                         currentCharacter = "C";
-                        infoBar.GetComponentInChildren<Text>().text = "";
-                        if (playerStatus.leftC.moved == false)
-                            moveButton.SetActive(true);
-                        if (playerStatus.leftC.attacked == false)
-                            attackButton.SetActive(true);
+
+                        if (gridScript.selectedCharacter == GameObject.Find("player1SlotC"))
+                        {
+                            if (playerStatus.leftC.moved == false)
+                                moveButton.SetActive(true);
+                            if (playerStatus.leftC.attacked == false)
+                                attackButton.SetActive(true);
+                        }
                     }
                 }
                 else // Right turn.
                 {
                     if (hit.collider.name == "player2SlotA")
                     {
-                        Debug.Log("here a2");
+
                         currentCharacter = "A2";
-                        infoBar.GetComponentInChildren<Text>().text = "";
-                        if (playerStatus.rightA.moved == false)
-                            moveButton.SetActive(true);
-                        if (playerStatus.rightA.attacked == false)
-                            attackButton.SetActive(true);
+
+                        if (gridScript.selectedCharacter == GameObject.Find("player2SlotA"))
+                        {
+                            if (playerStatus.rightA.moved == false)
+                                moveButton.SetActive(true);
+                            if (playerStatus.rightA.attacked == false)
+                                attackButton.SetActive(true);
+                        }
                     }
                     else if (hit.collider.name == "player2SlotB")
                     {
-                        Debug.Log("here b2");
+
                         currentCharacter = "B2";
-                        infoBar.GetComponentInChildren<Text>().text = "";
-                        if (playerStatus.rightB.moved == false)
-                            moveButton.SetActive(true);
-                        if (playerStatus.rightB.attacked == false)
-                            attackButton.SetActive(true);
+
+                        if (gridScript.selectedCharacter == GameObject.Find("player2SlotB"))
+                        {
+                            if (playerStatus.rightB.moved == false)
+                                moveButton.SetActive(true);
+                            if (playerStatus.rightB.attacked == false)
+                                attackButton.SetActive(true);
+                        }
 
                     }
                     else if (hit.collider.name == "player2SlotC")
                     {
-                        Debug.Log("here c2");
+
                         currentCharacter = "C2";
-                        infoBar.GetComponentInChildren<Text>().text = "";
-                        if (playerStatus.rightC.moved == false)
-                            moveButton.SetActive(true);
-                        if (playerStatus.rightC.attacked == false)
-                            attackButton.SetActive(true);
+
+                        if (gridScript.selectedCharacter == GameObject.Find("player2SlotC"))
+                        {
+                            if (playerStatus.rightC.moved == false)
+                                moveButton.SetActive(true);
+                            if (playerStatus.rightC.attacked == false)
+                                attackButton.SetActive(true);
+                        }
                     }
                 }
             }
