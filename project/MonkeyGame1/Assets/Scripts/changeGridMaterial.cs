@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using System.Linq;
 
 
 public class changeGridMaterial : MonoBehaviour
@@ -123,20 +124,35 @@ public class changeGridMaterial : MonoBehaviour
     public void displayRangeofMovement(string currentPosition)
     {
         int x, y;
+        string stringOfNumbers, strX, strY;
+
         GameObject gridObject, grid;
 
-        if (currentPosition == "")
-        {
-            Debug.LogError("String is empty");
-            return;
-        }
+        // if (currentPosition == "")
+        // {
+        //     Debug.LogError("String is empty in displayRangeOfMovement");
+        //     return;
+        // }
 
-        char xChar = currentPosition[5];
-        char yChar = currentPosition[7];
-        x = (int)char.GetNumericValue(xChar);
-        y = (int)char.GetNumericValue(yChar);
+        // Debug.Log("Incomming string = " + currentPosition);
 
-        Debug.Log("center = ( " + x + "," + y + ")");
+        stringOfNumbers = currentPosition.Substring(5);
+
+        List<string> myList = stringOfNumbers.Split('_').ToList();
+
+        strX = myList[0];
+        strY = myList[1];
+
+        x = int.Parse(strX);
+        y = int.Parse(strY);
+
+        
+        // char xChar = currentPosition[5];
+        // char yChar = currentPosition[7];
+        // x = (int)char.GetNumericValue(xChar);
+        // y = (int)char.GetNumericValue(yChar);
+
+        Debug.Log("Calculated center = ( " + x + "," + y + ")");
 
         grid = GameObject.Find("GridMap");
         // For odd numbered rows:
@@ -365,7 +381,7 @@ public class changeGridMaterial : MonoBehaviour
 
     bool checkCoordsOnBoader(int x, int y)
     {
-        if (x > 0 && x < 33 & y > 0 && y < 13)
+        if (x > 0 && x <= 31 & y >= 0 && y <= 12)
         {
             return true;
         }
