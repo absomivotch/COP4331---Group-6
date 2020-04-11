@@ -2538,7 +2538,7 @@ MonoBehaviour:
     m_Bits: 256
   moveButton: {fileID: 1124447859}
   attackButton: {fileID: 2033685146}
-  meleButton: {fileID: 1365644058}
+  meleeButton: {fileID: 1365644058}
   fireButton: {fileID: 1533459858}
 --- !u!20 &902191739
 Camera:
@@ -4313,7 +4313,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1365644061}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1578003862}
+        m_MethodName: meleeAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1365644061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4785,6 +4796,7 @@ GameObject:
   - component: {fileID: 1578003859}
   - component: {fileID: 1578003860}
   - component: {fileID: 1578003861}
+  - component: {fileID: 1578003862}
   m_Layer: 0
   m_Name: GridMap
   m_TagString: Grid
@@ -4917,6 +4929,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turn: 0
+--- !u!114 &1578003862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578003855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26abf71adc75c4647a71032455f4601d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chooseA: 0
+  chooseB: 0
+  chooseC: 0
 --- !u!1 &1584084975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5628,9 +5655,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Melee
-
-'
+  m_Text: Melee
 --- !u!222 &1816473047
 CanvasRenderer:
   m_ObjectHideFlags: 0

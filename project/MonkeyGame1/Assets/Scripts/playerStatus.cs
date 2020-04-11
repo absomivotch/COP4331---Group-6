@@ -12,6 +12,8 @@ public class playerStatus : MonoBehaviour
         public bool isCaptured;
         public bool hasBandana;
     }
+
+    
     public playerState leftA, leftB, leftC, rightA, rightB, rightC;
     public int turn;
     void Start()
