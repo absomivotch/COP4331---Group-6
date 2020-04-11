@@ -10,7 +10,7 @@ public class playerSelect : MonoBehaviour
     public LayerMask layermask;
 
     public GameObject playerA, playerB, playerC, moveButton, attackButton, meleButton, fireButton;
-    public string currentCharacter = "none";
+    public static string currentCharacter = "none";
 
 
 
@@ -20,6 +20,8 @@ public class playerSelect : MonoBehaviour
            
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            GameObject infoBar = GameObject.Find("InfoBar");
+            playerStatus playerStatus = GameObject.Find("GridMap").GetComponent<playerStatus>();
             
             // Click the character you want to play as, esnure that you're not already in movement mode.
             if(Physics.Raycast(ray, out hit, rayLength, layermask))
@@ -27,21 +29,27 @@ public class playerSelect : MonoBehaviour
                if(hit.collider.name == "player1SlotA")
                {
                     currentCharacter = "A";
-                    moveButton.SetActive(true);
-                    attackButton.SetActive(true);
+                    if(playerStatus.leftA.moved == false)
+                        moveButton.SetActive(true);
+                    if(playerStatus.leftA.attacked == false)
+                        attackButton.SetActive(true);
                }
                else if(hit.collider.name == "player1SlotB")
                {
                     currentCharacter = "B";
-                    moveButton.SetActive(true);
-                    attackButton.SetActive(true);
+                   if(playerStatus.leftB.moved == false)
+                        moveButton.SetActive(true);
+                    if(playerStatus.leftB.attacked == false)
+                        attackButton.SetActive(true);
 
                }
                else if(hit.collider.name == "player1SlotC")
                {
                    currentCharacter = "C";
-                    moveButton.SetActive(true);
-                    attackButton.SetActive(true);
+                   if(playerStatus.leftC.moved == false)
+                        moveButton.SetActive(true);
+                    if(playerStatus.leftC.attacked == false)
+                        attackButton.SetActive(true);
                }
                
             }
@@ -53,7 +61,7 @@ public class playerSelect : MonoBehaviour
                          attackButton.SetActive(false);
                          fireButton.SetActive(false);
                          meleButton.SetActive(false);
-
+                         infoBar.GetComponentInChildren<Text>().text = "";
                          currentCharacter = "none";
                     }
                    

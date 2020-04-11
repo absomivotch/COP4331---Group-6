@@ -34,4 +34,10 @@ public class gridPlacement : MonoBehaviour
         }
     }
 
+    public bool checkHexOccupied(string hexTile){
+        if(hexTile == leftA || hexTile == leftB || hexTile == leftC || hexTile == rightA || hexTile == rightB || hexTile == rightC)
+            return true;
+        return false;
+    }
+
 }

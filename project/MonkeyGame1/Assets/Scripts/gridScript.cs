@@ -8,7 +8,7 @@ using System;
 public class gridScript : MonoBehaviour
 {
     public HexType[] hexTypes;
-    public GameObject hexPrefab, hexGrid, selectedCharacter, gameCamera, moveButton, gridObject, selectedHex, selectedHexChild;
+    public GameObject hexPrefab, hexGrid, selectedCharacter, gameCamera, moveButton, gridObject, selectedHex, selectedHexChild, infoBar;
     int width = 33, height = 13, x, y, oldX, oldY;
     int[,] tiles;
     float xPosition, xOffset = 0.855f * 8.0f, zOffset = 1.523f * 4.0f;
@@ -36,7 +36,7 @@ public class gridScript : MonoBehaviour
     void Start()
     {
 
-
+        infoBar = GameObject.Find("InfoBar");
         CreateMapTerrain();
         CreateMovementGraph();
         Awake(); // Create Physical hexGrid.
@@ -150,11 +150,14 @@ public class gridScript : MonoBehaviour
         }
     }
 
+    // Moves the player.
     public void warp(string hexName)
     {
         int currentX, desiredX, currentY, desiredY;
         stringTileToIntCoords stringTileToIntCoords = GameObject.Find("GridMap").GetComponent<stringTileToIntCoords>();
         gridPlacement gridPlacement = GameObject.Find("GridMap").GetComponent<gridPlacement>();
+        playerSelect playerSelect = gameCamera.GetComponent<playerSelect>();
+        playerStatus playerStatus = GameObject.Find("GridMap").GetComponent<playerStatus>();
 
         if (moveButton.GetComponentInChildren<Text>().text == "Confirm Move")
         {
@@ -181,13 +184,19 @@ public class gridScript : MonoBehaviour
             desiredX = stringTileToIntCoords.getXposition(hexName);
             desiredY = stringTileToIntCoords.getYposition(hexName);
 
-            // Determine if desired coords are within range, and are unobstructed to move to.
+            // Determine if desired coords are within range.
             if(Math.Abs(desiredX - currentX) > 2 || Math.Abs(desiredY - currentY) > 2){
-                Debug.Log("out of range");
+                infoBar.GetComponentInChildren<Text>().text = "Out of range";
                 return;
             }
+            // Determine if the terrain is obstrcuted by nature.
             if(tiles[desiredX, desiredY] == (int)TerrainType.Impassable){
-                Debug.Log("terrain is impassable");
+                infoBar.GetComponentInChildren<Text>().text = "Terrain is impassable";
+                return;
+            }
+            // Determine is another player is on that hex.
+            if(gridPlacement.checkHexOccupied(hexName)){
+                infoBar.GetComponentInChildren<Text>().text = "Tile is occupied";
                 return;
             }
 
@@ -199,16 +208,21 @@ public class gridScript : MonoBehaviour
             {
                 case "player1SlotA":
                     gridPlacement.leftA = hexName;
+                    playerStatus.leftA.moved = true;
                     break;
                 case "player1SlotB":
                     gridPlacement.leftB = hexName;
+                    playerStatus.leftB.moved = true;
                     break;
                 case "player1SlotC":
                     gridPlacement.leftC = hexName;
+                    playerStatus.leftC.moved = true;
                     break;
             }
         }
     }
+
+    // This function is wrongly named, warp actually moves the player. This func would have moved the player but pathfinding was scrapped.
     public void MoveCurrentCharacter(int x, int y)
     {
         // Determine which character is currently selected.
