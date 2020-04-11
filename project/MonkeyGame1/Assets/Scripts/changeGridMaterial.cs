@@ -98,6 +98,15 @@ public class changeGridMaterial : MonoBehaviour
                 case "player1SlotC":
                     displayRangeofMovement(gridPlacement.leftC);
                     break;
+                case "player2SlotA":
+                    displayRangeofMovement(gridPlacement.rightA);
+                    break;
+                case "player2SlotB":
+                    displayRangeofMovement(gridPlacement.rightB);
+                    break;
+                case "player2SlotC":
+                    displayRangeofMovement(gridPlacement.rightC);
+                    break;
             }
         }
     }
@@ -134,7 +143,7 @@ public class changeGridMaterial : MonoBehaviour
             return;
         }
 
-        // Debug.Log("Incomming string = " + currentPosition);
+        Debug.Log("Incomming string = " + currentPosition);
 
         stringOfNumbers = currentPosition.Substring(5);
 

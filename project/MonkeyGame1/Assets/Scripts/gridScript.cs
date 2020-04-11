@@ -176,6 +176,18 @@ public class gridScript : MonoBehaviour
                     currentX = stringTileToIntCoords.getXposition(gridPlacement.leftC);
                     currentY = stringTileToIntCoords.getYposition(gridPlacement.leftC);
                     break;
+                case "player2SlotA":
+                    currentX = stringTileToIntCoords.getXposition(gridPlacement.rightA);
+                    currentY = stringTileToIntCoords.getYposition(gridPlacement.rightA);
+                    break;
+                case "player2SlotB":
+                    currentX = stringTileToIntCoords.getXposition(gridPlacement.rightB);
+                    currentY = stringTileToIntCoords.getYposition(gridPlacement.rightB);
+                    break;
+                case "player2SlotC":
+                    currentX = stringTileToIntCoords.getXposition(gridPlacement.rightC);
+                    currentY = stringTileToIntCoords.getYposition(gridPlacement.rightC);
+                    break;
                 default:
                     currentX = 0;
                     currentY = 0;
@@ -185,17 +197,20 @@ public class gridScript : MonoBehaviour
             desiredY = stringTileToIntCoords.getYposition(hexName);
 
             // Determine if desired coords are within range.
-            if(Math.Abs(desiredX - currentX) > 2 || Math.Abs(desiredY - currentY) > 2){
+            if (Math.Abs(desiredX - currentX) > 2 || Math.Abs(desiredY - currentY) > 2)
+            {
                 infoBar.GetComponentInChildren<Text>().text = "Out of range";
                 return;
             }
             // Determine if the terrain is obstrcuted by nature.
-            if(tiles[desiredX, desiredY] == (int)TerrainType.Impassable){
+            if (tiles[desiredX, desiredY] == (int)TerrainType.Impassable)
+            {
                 infoBar.GetComponentInChildren<Text>().text = "Terrain is impassable";
                 return;
             }
             // Determine is another player is on that hex.
-            if(gridPlacement.checkHexOccupied(hexName)){
+            if (gridPlacement.checkHexOccupied(hexName))
+            {
                 infoBar.GetComponentInChildren<Text>().text = "Tile is occupied";
                 return;
             }
@@ -218,6 +233,18 @@ public class gridScript : MonoBehaviour
                     gridPlacement.leftC = hexName;
                     playerStatus.leftC.moved = true;
                     break;
+                case "player2SlotA":
+                    gridPlacement.rightA = hexName;
+                    playerStatus.rightA.moved = true;
+                    break;
+                case "player2SlotB":
+                    gridPlacement.rightB = hexName;
+                    playerStatus.rightB.moved = true;
+                    break;
+                case "player2SlotC":
+                    gridPlacement.rightC = hexName;
+                    playerStatus.rightC.moved = true;
+                    break;
             }
         }
     }
@@ -229,28 +256,53 @@ public class gridScript : MonoBehaviour
         gridPlacement gridPlacement = GameObject.Find("GridMap").GetComponent<gridPlacement>();
         playerSelect playerSelect = gameCamera.GetComponent<playerSelect>();
         changeGridMaterial changeGridMaterial = GameObject.Find("GameManager").GetComponent<changeGridMaterial>();
+        playerStatus playerStatus = GameObject.Find("GridMap").GetComponent<playerStatus>();
         gridObject = GameObject.Find("GridMap");
 
-        if (playerSelect.currentCharacter == "A")
+        if (playerStatus.turn == 0)
         {
-            selectedCharacter = GameObject.Find("player1SlotA");
-            Debug.Log("selected A");
-        }
-        else if (playerSelect.currentCharacter == "B")
-        {
-            selectedCharacter = GameObject.Find("player1SlotB");
-            Debug.Log("selected B");
-        }
-        else if (playerSelect.currentCharacter == "C")
-        {
-            selectedCharacter = GameObject.Find("player1SlotC");
-            Debug.Log("selected C");
+            if (playerSelect.currentCharacter == "A")
+            {
+                selectedCharacter = GameObject.Find("player1SlotA");
+                Debug.Log("selected A");
+            }
+            else if (playerSelect.currentCharacter == "B")
+            {
+                selectedCharacter = GameObject.Find("player1SlotB");
+                Debug.Log("selected B");
+            }
+            else if (playerSelect.currentCharacter == "C")
+            {
+                selectedCharacter = GameObject.Find("player1SlotC");
+                Debug.Log("selected C");
+            }
+            else
+            {
+                selectedCharacter = null;
+            }
         }
         else
         {
-            selectedCharacter = null;
+            if (playerSelect.currentCharacter == "A2")
+            {
+                selectedCharacter = GameObject.Find("player2SlotA");
+                Debug.Log("selected A2");
+            }
+            else if (playerSelect.currentCharacter == "B2")
+            {
+                selectedCharacter = GameObject.Find("player2SlotB");
+                Debug.Log("selected B2");
+            }
+            else if (playerSelect.currentCharacter == "C2")
+            {
+                selectedCharacter = GameObject.Find("player2SlotC");
+                Debug.Log("selected C2");
+            }
+            else
+            {
+                selectedCharacter = null;
+            }
         }
-
         // If in move mode, then move the player.
         if (moveButton.GetComponentInChildren<Text>().text == "Confirm Move")
         {

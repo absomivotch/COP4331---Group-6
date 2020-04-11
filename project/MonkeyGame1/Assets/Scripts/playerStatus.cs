@@ -12,9 +12,11 @@ public class playerStatus : MonoBehaviour
         public bool hasBandana;
     }
     public playerState leftA, leftB, leftC, rightA, rightB, rightC;
-
+    public int turn;
     void Start()
     {
+        turn = 0;
+        Debug.Log("turn 0");
         // Initalize the players' states.
         leftA.moved = false;
         leftA.attacked = false;
@@ -49,6 +51,15 @@ public class playerStatus : MonoBehaviour
     }
    
     public void nextTurn(){
+        if(turn == 0){
+            turn = 1;
+            Debug.Log("turn 1");
+        }
+        else
+        {
+            turn = 0;
+            Debug.Log("turn 0");
+        }
         leftA.moved = false;
         leftA.attacked = false;
 
