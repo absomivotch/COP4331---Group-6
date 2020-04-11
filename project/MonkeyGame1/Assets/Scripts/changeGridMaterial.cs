@@ -128,11 +128,11 @@ public class changeGridMaterial : MonoBehaviour
 
         GameObject gridObject, grid;
 
-        // if (currentPosition == "")
-        // {
-        //     Debug.LogError("String is empty in displayRangeOfMovement");
-        //     return;
-        // }
+        if (currentPosition == "")
+        {
+            Debug.LogError("String is empty in displayRangeOfMovement");
+            return;
+        }
 
         // Debug.Log("Incomming string = " + currentPosition);
 
@@ -146,13 +146,8 @@ public class changeGridMaterial : MonoBehaviour
         x = int.Parse(strX);
         y = int.Parse(strY);
 
-        
-        // char xChar = currentPosition[5];
-        // char yChar = currentPosition[7];
-        // x = (int)char.GetNumericValue(xChar);
-        // y = (int)char.GetNumericValue(yChar);
 
-        Debug.Log("Calculated center = ( " + x + "," + y + ")");
+        // Debug.Log("Calculated center = ( " + x + "," + y + ")");
 
         grid = GameObject.Find("GridMap");
         // For odd numbered rows:

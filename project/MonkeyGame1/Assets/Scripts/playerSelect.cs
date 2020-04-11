@@ -12,12 +12,6 @@ public class playerSelect : MonoBehaviour
     public GameObject playerA, playerB, playerC, moveButton, attackButton, meleButton, fireButton;
     public string currentCharacter = "none";
 
-     void Start()
-    {
-        playerA.GetComponent<playerMovement>().enabled = false;
-        playerB.GetComponent<playerMovement>().enabled = false;
-        playerC.GetComponent<playerMovement>().enabled = false;
-    }
 
 
     void Update()

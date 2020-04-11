@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using System;
 
 public class gridScript : MonoBehaviour
 {
@@ -151,13 +152,49 @@ public class gridScript : MonoBehaviour
 
     public void warp(string hexName)
     {
+        int currentX, desiredX, currentY, desiredY;
+        stringTileToIntCoords stringTileToIntCoords = GameObject.Find("GridMap").GetComponent<stringTileToIntCoords>();
+        gridPlacement gridPlacement = GameObject.Find("GridMap").GetComponent<gridPlacement>();
+
         if (moveButton.GetComponentInChildren<Text>().text == "Confirm Move")
         {
+            // Find the desired and current x and y coords of the selecetd monkey.
+            switch (selectedCharacter.name)
+            {
+                case "player1SlotA":
+                    currentX = stringTileToIntCoords.getXposition(gridPlacement.leftA);
+                    currentY = stringTileToIntCoords.getYposition(gridPlacement.leftA);
+                    break;
+                case "player1SlotB":
+                    currentX = stringTileToIntCoords.getXposition(gridPlacement.leftB);
+                    currentY = stringTileToIntCoords.getYposition(gridPlacement.leftB);
+                    break;
+                case "player1SlotC":
+                    currentX = stringTileToIntCoords.getXposition(gridPlacement.leftC);
+                    currentY = stringTileToIntCoords.getYposition(gridPlacement.leftC);
+                    break;
+                default:
+                    currentX = 0;
+                    currentY = 0;
+                    break;
+            }
+            desiredX = stringTileToIntCoords.getXposition(hexName);
+            desiredY = stringTileToIntCoords.getYposition(hexName);
+
+            // Determine if desired coords are within range, and are unobstructed to move to.
+            if(Math.Abs(desiredX - currentX) > 2 || Math.Abs(desiredY - currentY) > 2){
+                Debug.Log("out of range");
+                return;
+            }
+            if(tiles[desiredX, desiredY] == (int)TerrainType.Impassable){
+                Debug.Log("terrain is impassable");
+                return;
+            }
+
             // Move.
             selectedCharacter.transform.position = gridObject.transform.Find(hexName).position;
-            
+
             // Update position.
-            gridPlacement gridPlacement = GameObject.Find("GridMap").GetComponent<gridPlacement>();
             switch (selectedCharacter.name)
             {
                 case "player1SlotA":
@@ -203,7 +240,7 @@ public class gridScript : MonoBehaviour
         // If in move mode, then move the player.
         if (moveButton.GetComponentInChildren<Text>().text == "Confirm Move")
         {
-            
+
             // Highlight selected hex (where the user wants to move).
             if (choseATile == false)
             {
