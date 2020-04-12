@@ -156,7 +156,7 @@ public class MeleeAttack : MonoBehaviour
                         break;
                     default:
                         return;
-                        break;
+                     
                 }
             }
             else
@@ -191,7 +191,7 @@ public class MeleeAttack : MonoBehaviour
                         break;
                     default:
                         return;
-                        break;
+                    
                 }
             }
 

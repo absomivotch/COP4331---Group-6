@@ -19,7 +19,7 @@ public class playerStatus : MonoBehaviour
     public int turn;
     void Start()
     {
-        GameObject.Find("InfoBar").GetComponentInChildren<Text>().text = "Left's Turn, Double click to select chacaters";
+        GameObject.Find("InfoBar").GetComponentInChildren<Text>().text = "Left's Turn, Double click to select characters";
         turn = 0;
         // Initalize the players' states.
         leftA.moved = false;
