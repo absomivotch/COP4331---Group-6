@@ -122,7 +122,7 @@ public class MeleeAttack : MonoBehaviour
 
         if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
         {
-            
+           
             if (playerStatus.turn == 1)
             {
                 switch (playerSelect.meleeingCharacter)
@@ -156,23 +156,24 @@ public class MeleeAttack : MonoBehaviour
                         break;
                     default:
                         return;
-                      
+                        break;
                 }
             }
             else
             {
                 switch (playerSelect.meleeingCharacter)
                 {
-                    case "A":
+                    case "A2":
 
                         if (playerStatus.AisOK)
                         {
+
                             chooseA = true;
                             chooseB = false;
                             chooseC = false;
                         }
                         break;
-                    case "B":
+                    case "B2":
                         if (playerStatus.BisOK)
                         {
                             chooseA = false;
@@ -180,11 +181,9 @@ public class MeleeAttack : MonoBehaviour
                             chooseC = false;
                         }
                         break;
-                    case "C":
-
+                    case "C2":
                         if (playerStatus.CisOK)
                         {
-                           
                             chooseA = false;
                             chooseB = false;
                             chooseC = true;
@@ -192,7 +191,7 @@ public class MeleeAttack : MonoBehaviour
                         break;
                     default:
                         return;
-                        
+                        break;
                 }
             }
 
@@ -217,7 +216,7 @@ public class MeleeAttack : MonoBehaviour
             // Clicked Melee button when text is confirm melee.
             if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
             {
-               
+
                 meleeButton.GetComponentInChildren<Text>().text = "Melee";
 
                 if (playerStatus.turn == 1)
@@ -249,7 +248,6 @@ public class MeleeAttack : MonoBehaviour
                 }
                 else
                 {
-                    
                     if (chosenCharacter == "A")
                     {
                         chosenEnemy = GameObject.Find("player2SlotA");
