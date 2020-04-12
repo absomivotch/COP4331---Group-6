@@ -11,7 +11,6 @@ public class VictoryMenu : MonoBehaviour
     }
     public void VicLoadMenu()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
