@@ -17,9 +17,12 @@ public class playerStatus : MonoBehaviour
     public playerState leftA, leftB, leftC, rightA, rightB, rightC;
     public bool AisOK = false, BisOK = false, CisOK = false, meleeMode = false;
     public int turn;
+
+    public playerSelect playerSelect;
     void Start()
     {
-        GameObject.Find("InfoBar").GetComponentInChildren<Text>().text = "Left's Turn, Double click to select chacaters";
+        playerSelect = GameObject.Find("GameCamera").GetComponent<playerSelect>();
+        GameObject.Find("InfoBar").GetComponentInChildren<Text>().text = "Left's Turn, click to select characters";
         turn = 0;
         // Initalize the players' states.
         leftA.moved = false;
@@ -64,6 +67,11 @@ public class playerStatus : MonoBehaviour
             turn = 0;
            GameObject.Find("InfoBar").GetComponentInChildren<Text>().text = "Left's Turn";
         }
+        playerSelect.moveButton.SetActive(false);
+        playerSelect.attackButton.SetActive(false);
+        playerSelect.fireButton.SetActive(false);
+        playerSelect.meleeButton.SetActive(false);
+
         leftA.moved = false;
         leftA.attacked = false;
 

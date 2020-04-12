@@ -197,7 +197,7 @@ public class gridScript : MonoBehaviour
             desiredY = stringTileToIntCoords.getYposition(hexName);
 
             // Determine if desired coords are within range.
-            if (Math.Abs(desiredX - currentX) > 2 || Math.Abs(desiredY - currentY) > 2) // FIX RANGE TO 2
+            if (Math.Abs(desiredX - currentX) > 90 || Math.Abs(desiredY - currentY) > 90) // FIX RANGE TO 2
             {
                 infoBar.GetComponentInChildren<Text>().text = "Out of range";
                 return;

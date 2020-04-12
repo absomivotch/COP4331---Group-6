@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class attack : MonoBehaviour
 {
     public GameObject attackButton, moveButton, meleButton, fireButton;
+    public playerSelect playerSelect;
+
+    public void Start()
+    {
+        playerSelect = GameObject.Find("GameCamera").GetComponent<playerSelect>();
+    }
 
     public void attackButtonPressed()
     {
