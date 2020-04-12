@@ -14,6 +14,7 @@ public class playerSelect : MonoBehaviour
 
     void Update()
     {
+        infoBar = GameObject.Find("InfoBar");
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
 
@@ -32,6 +33,12 @@ public class playerSelect : MonoBehaviour
                     if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
                     {
                         meleeingCharacter = "A";
+                        if(playerStatus.AisOK && playerStatus.turn == 1){
+                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee left team's A player";
+                        }
+                        else if(!playerStatus.AisOK && playerStatus.turn == 1){
+                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
+                        }
                     }
                     else
                     {
@@ -39,6 +46,7 @@ public class playerSelect : MonoBehaviour
 
                         if (gridScript.selectedCharacter == GameObject.Find("player1SlotA")) // double check with grid script
                         {
+                            infoBar.GetComponentInChildren<Text>().text = "Left Player A Selected";
                             if (playerStatus.leftA.moved == false)
                                 moveButton.SetActive(true);
                             if (playerStatus.leftA.attacked == false)
@@ -54,6 +62,12 @@ public class playerSelect : MonoBehaviour
                     if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
                     {
                         meleeingCharacter = "B";
+                        if(playerStatus.BisOK && playerStatus.turn == 1){
+                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee left team's A player";
+                        }
+                        else if(!playerStatus.BisOK && playerStatus.turn == 1){
+                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
+                        }
                     }
                     else
                     {
@@ -61,6 +75,7 @@ public class playerSelect : MonoBehaviour
 
                         if (gridScript.selectedCharacter == GameObject.Find("player1SlotB"))
                         {
+                            infoBar.GetComponentInChildren<Text>().text = "Left Player B Selected";
                             if (playerStatus.leftB.moved == false)
                                 moveButton.SetActive(true);
                             if (playerStatus.leftB.attacked == false)
@@ -75,6 +90,12 @@ public class playerSelect : MonoBehaviour
                     if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
                     {
                         meleeingCharacter = "C";
+                        if(playerStatus.CisOK && playerStatus.turn == 1){
+                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee left team's C player";
+                        }
+                        else if(!playerStatus.CisOK && playerStatus.turn == 1){
+                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
+                        }
                     }
                     else
                     {
@@ -82,6 +103,7 @@ public class playerSelect : MonoBehaviour
 
                         if (gridScript.selectedCharacter == GameObject.Find("player1SlotC"))
                         {
+                            infoBar.GetComponentInChildren<Text>().text = "Left Player C Selected";
                             if (playerStatus.leftC.moved == false)
                                 moveButton.SetActive(true);
                             if (playerStatus.leftC.attacked == false)
@@ -98,6 +120,12 @@ public class playerSelect : MonoBehaviour
                     if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
                     {
                         meleeingCharacter = "A2";
+                        if(playerStatus.AisOK && playerStatus.turn == 0){
+                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee right team's A player";
+                        }
+                        else if(!playerStatus.AisOK && playerStatus.turn == 0){
+                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
+                        }
                     }
                     else
                     {
@@ -105,6 +133,7 @@ public class playerSelect : MonoBehaviour
 
                         if (gridScript.selectedCharacter == GameObject.Find("player2SlotA"))
                         {
+                            infoBar.GetComponentInChildren<Text>().text = "Right Player A Selected";
                             if (playerStatus.rightA.moved == false)
                                 moveButton.SetActive(true);
                             if (playerStatus.rightA.attacked == false)
@@ -119,12 +148,19 @@ public class playerSelect : MonoBehaviour
                     if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
                     {
                         meleeingCharacter = "B2";
+                        if(playerStatus.BisOK && playerStatus.turn == 0){
+                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee right team's B player";
+                        }
+                        else if(!playerStatus.BisOK && playerStatus.turn == 0){
+                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
+                        }
                     }
                     else
                         currentCharacter = "B2";
 
                     if (gridScript.selectedCharacter == GameObject.Find("player2SlotB"))
                     {
+                        infoBar.GetComponentInChildren<Text>().text = "Right Player B Selected";
                         if (playerStatus.rightB.moved == false)
                             moveButton.SetActive(true);
                         if (playerStatus.rightB.attacked == false)
@@ -138,6 +174,12 @@ public class playerSelect : MonoBehaviour
                     if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
                     {
                         meleeingCharacter = "C2";
+                        if(playerStatus.CisOK && playerStatus.turn == 0){
+                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee right team's C player";
+                        }
+                        else if(!playerStatus.CisOK && playerStatus.turn == 0){
+                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
+                        }
                     }
                     else
                     {
@@ -145,6 +187,7 @@ public class playerSelect : MonoBehaviour
 
                         if (gridScript.selectedCharacter == GameObject.Find("player2SlotC"))
                         {
+                            infoBar.GetComponentInChildren<Text>().text = "Right Player C Selected";
                             if (playerStatus.rightC.moved == false)
                                 moveButton.SetActive(true);
                             if (playerStatus.rightC.attacked == false)
@@ -154,18 +197,19 @@ public class playerSelect : MonoBehaviour
                     }
                 }
             }
-
             else // clicking away 
             {
                infoBar = GameObject.Find("InfoBar");
-                if (moveButton.GetComponentInChildren<Text>().text == "Move")// && meleeButton.GetComponentInChildren<Text>().text != "Confirm Melee")
+                if (moveButton.GetComponentInChildren<Text>().text == "Move" && meleeButton.GetComponentInChildren<Text>().text != "Confirm Melee")
                 {
+                    Debug.Log("clicking away");
                     moveButton.SetActive(false);
                     attackButton.SetActive(false);
                     fireButton.SetActive(false);
                     meleeButton.SetActive(false);
                     infoBar.GetComponentInChildren<Text>().text = "";
                     currentCharacter = "none";
+                    meleeingCharacter = "none";
                 }
             }
 

@@ -7,12 +7,23 @@ public class attack : MonoBehaviour
 {
     public GameObject attackButton, moveButton, meleButton, fireButton;
 
-   public void attackButtonPressed(){
-       attackButton.SetActive(false);
-       moveButton.SetActive(false);
-       meleButton.SetActive(true);
-       fireButton.SetActive(true);
-   }
+    public void attackButtonPressed()
+    {
+        if (attackButton.GetComponentInChildren<Text>().text == "Attack")
+        {
+            attackButton.GetComponentInChildren<Text>().text = "Exit Attack mode";
+            moveButton.SetActive(false);
+            meleButton.SetActive(true);
+            meleButton.GetComponentInChildren<Text>().text = "Melee";
+            fireButton.SetActive(true);
+        }
+        else{
+            attackButton.GetComponentInChildren<Text>().text = "Attack";
+            moveButton.SetActive(true);
+            meleButton.SetActive(false);
+            fireButton.SetActive(false);
+        }
+    }
 
-   
+
 }

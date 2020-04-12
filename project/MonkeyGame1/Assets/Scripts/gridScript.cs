@@ -265,17 +265,15 @@ public class gridScript : MonoBehaviour
             if (playerSelect.currentCharacter == "A")
             {
                 selectedCharacter = GameObject.Find("player1SlotA");
-                infoBar.GetComponentInChildren<Text>().text = "Left Player A Selected";
+                
             }
             else if (playerSelect.currentCharacter == "B")
             {
                 selectedCharacter = GameObject.Find("player1SlotB");
-                infoBar.GetComponentInChildren<Text>().text = "Left Player B Selected";
             }
             else if (playerSelect.currentCharacter == "C")
             {
                 selectedCharacter = GameObject.Find("player1SlotC");
-                infoBar.GetComponentInChildren<Text>().text = "Left Player C Selected";
             }
             else
             {
@@ -287,17 +285,14 @@ public class gridScript : MonoBehaviour
             if (playerSelect.currentCharacter == "A2")
             {
                 selectedCharacter = GameObject.Find("player2SlotA");
-                infoBar.GetComponentInChildren<Text>().text = "Right Player A Selected";
             }
             else if (playerSelect.currentCharacter == "B2")
             {
                 selectedCharacter = GameObject.Find("player2SlotB");
-                infoBar.GetComponentInChildren<Text>().text = "Right Player B Selected";
             }
             else if (playerSelect.currentCharacter == "C2")
             {
                 selectedCharacter = GameObject.Find("player2SlotC");
-                infoBar.GetComponentInChildren<Text>().text = "Right Player C Selected";
             }
             else
             {

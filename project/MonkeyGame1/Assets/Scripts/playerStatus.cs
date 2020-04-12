@@ -15,6 +15,7 @@ public class playerStatus : MonoBehaviour
 
     
     public playerState leftA, leftB, leftC, rightA, rightB, rightC;
+    public bool AisOK = false, BisOK = false, CisOK = false, meleeMode = false;
     public int turn;
     void Start()
     {

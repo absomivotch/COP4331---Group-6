@@ -19,122 +19,16 @@ public class MeleeAttack : MonoBehaviour
         string currentPosition, enemyApos, enemyBpos, enemyCpos;
         int currentX, currentY;
         List<string> surroundingTiles = new List<string>();
-        bool AisOK = false, BisOK = false, CisOK = false;
+        // bool AisOK = false, BisOK = false, CisOK = false;
         GameObject meleeButton = GameObject.Find("MeleeButton"), infoBar = GameObject.Find("InfoBar"), chosenEnemy;
         GameObject gridObject = GameObject.Find("GridMap");
 
 
-        if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
-        {
-            if (playerStatus.turn == 1)
-            {
-                switch (playerSelect.meleeingCharacter)
-                {
-                    case "A":
-                        Debug.Log("meleeing A");
-                        if (AisOK)
-                        {
-                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee left team's A player";
-                            chooseA = true;
-                            chooseB = false;
-                            chooseC = false;
-                        }
-                        else
-                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
-                        break;
-                    case "B":
-                        Debug.Log("meleeing B");
-                        if (BisOK)
-                        {
-                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee left team's B player";
-                            chooseA = false;
-                            chooseB = true;
-                            chooseC = false;
-                        }
-                        else
-                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
-                        break;
-                    case "C":
-                        Debug.Log("meleeing C");
-                        if (CisOK)
-                        {
-                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee left team's C player";
-                            chooseA = false;
-                            chooseB = false;
-                            chooseC = true;
-                        }
-                        else
-                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else
-            {
-                switch (playerSelect.meleeingCharacter)
-                {
-                    case "A2":
-                        Debug.Log("meleeing A2");
-                        if (AisOK)
-                        {
-                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee right team's A player";
-                            chooseA = true;
-                            chooseB = false;
-                            chooseC = false;
-                        }
-                        else
-                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
-                        break;
-                    case "B2":
-                    Debug.Log("meleeing B2");
-                        if (BisOK)
-                        {
-                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee right team's B player";
-                            chooseA = false;
-                            chooseB = true;
-                            chooseC = false;
-                        }
-                        else
-                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
-                        break;
-                    case "C2":
-                        Debug.Log("meleeing C2");
-                        if (CisOK)
-                        {
-                            infoBar.GetComponentInChildren<Text>().text = "Choosing to melee right team's C player";
-                            chooseA = false;
-                            chooseB = false;
-                            chooseC = true;
-                        }
-                        else
-                            infoBar.GetComponentInChildren<Text>().text = "Player out of range";
-                        break;
-                    default:
-                        break;
-                }
-            }
-            // Make call to doMelee function.
-            if (chooseA)
-                doMelee("A");
-            if (chooseB)
-                doMelee("B");
-            if (chooseC)
-                doMelee("C");
 
-            chooseA = false;
-            chooseB = false;
-            chooseC = false;
-
-            meleeButton.GetComponentInChildren<Text>().text = "Melee";
-            meleeButton.SetActive(false);
-        }
 
         // Clicked Melee button when text is Melee
         if (meleeButton.GetComponentInChildren<Text>().text == "Melee")
         {
-
-            Debug.Log("here");
             meleeButton.GetComponentInChildren<Text>().text = "Confirm Melee";
 
 
@@ -210,20 +104,111 @@ public class MeleeAttack : MonoBehaviour
             {
                 if (enemyApos == surroundingTiles[i])
                 {
-                    AisOK = true;
+                    playerStatus.AisOK = true;
                     Debug.Log("AisOK");
                 }
                 if (enemyBpos == surroundingTiles[i])
                 {
-                    BisOK = true;
+                    playerStatus.BisOK = true;
                     Debug.Log("BisOK");
                 }
                 if (enemyCpos == surroundingTiles[i])
                 {
-                    CisOK = true;
+                    playerStatus.CisOK = true;
                     Debug.Log("CisOK");
                 }
             }
+        }
+
+        if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
+        {
+           
+            if (playerStatus.turn == 1)
+            {
+                switch (playerSelect.meleeingCharacter)
+                {
+                    case "A":
+
+                        if (playerStatus.AisOK)
+                        {
+                            chooseA = true;
+                            chooseB = false;
+                            chooseC = false;
+                        }
+                        break;
+                    case "B":
+
+                        if (playerStatus.BisOK)
+                        {
+                            chooseA = false;
+                            chooseB = true;
+                            chooseC = false;
+                        }
+                        break;
+                    case "C":
+
+                        if (playerStatus.CisOK)
+                        {
+                            chooseA = false;
+                            chooseB = false;
+                            chooseC = true;
+                        }
+                        break;
+                    default:
+                        return;
+                        break;
+                }
+            }
+            else
+            {
+                switch (playerSelect.meleeingCharacter)
+                {
+                    case "A2":
+
+                        if (playerStatus.AisOK)
+                        {
+
+                            chooseA = true;
+                            chooseB = false;
+                            chooseC = false;
+                        }
+                        break;
+                    case "B2":
+                        if (playerStatus.BisOK)
+                        {
+                            chooseA = false;
+                            chooseB = true;
+                            chooseC = false;
+                        }
+                        break;
+                    case "C2":
+                        if (playerStatus.CisOK)
+                        {
+                            chooseA = false;
+                            chooseB = false;
+                            chooseC = true;
+                        }
+                        break;
+                    default:
+                        return;
+                        break;
+                }
+            }
+
+            // Make call to doMelee function.
+            if (chooseA)
+                doMelee("A");
+            if (chooseB)
+                doMelee("B");
+            if (chooseC)
+                doMelee("C");
+
+            chooseA = false;
+            chooseB = false;
+            chooseC = false;
+            playerStatus.AisOK = false;
+            playerStatus.BisOK = false;
+            playerStatus.CisOK = false;
         }
 
         void doMelee(string chosenCharacter)
@@ -289,10 +274,6 @@ public class MeleeAttack : MonoBehaviour
                     }
                 }
             }
-
-            meleeButton.SetActive(false);
-            GameObject.Find("FireButton").SetActive(false);
-
         }
     }
 }
