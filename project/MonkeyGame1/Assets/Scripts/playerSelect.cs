@@ -9,7 +9,7 @@ public class playerSelect : MonoBehaviour
     public float rayLength;
     public LayerMask layermask;
 
-    public GameObject moveButton, attackButton, meleeButton, fireButton, infoBar;
+    public GameObject moveButton, attackButton, meleeButton, infoBar;
     public static string currentCharacter = "none", meleeingCharacter = "none";
 
     void Update()
@@ -205,7 +205,6 @@ public class playerSelect : MonoBehaviour
                     Debug.Log("clicking away");
                     moveButton.SetActive(false);
                     attackButton.SetActive(false);
-                    fireButton.SetActive(false);
                     meleeButton.SetActive(false);
                     infoBar.GetComponentInChildren<Text>().text = "";
                     currentCharacter = "none";
