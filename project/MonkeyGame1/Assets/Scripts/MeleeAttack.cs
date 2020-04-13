@@ -230,8 +230,8 @@ public class MeleeAttack : MonoBehaviour
                 {
                     chosenEnemy = GameObject.Find("player1SlotA");
                     playerStatus.leftA.isCaptured = true;
-                    if(playerStatus.chosenEnemy.name.hasBandanna){
-                        bandannaCapture.captureBandanna(chosenEnemy); //FILL IN THE REST FOR ALL CASES.
+                    if(playerStatus.leftA.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
                     }
                     // Send to barrel.
                     infoBar.GetComponentInChildren<Text>().text = "Sent left's A player to the monkey barrel!";
@@ -241,6 +241,9 @@ public class MeleeAttack : MonoBehaviour
                 {
                     chosenEnemy = GameObject.Find("player1SlotB");
                     playerStatus.leftA.isCaptured = true;
+                     if(playerStatus.leftB.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
+                    }
                     // Send to barrel.
                     infoBar.GetComponentInChildren<Text>().text = "Sent left's B player to the monkey barrel!";
                     chosenEnemy.transform.position = gridObject.transform.Find("Tile_27_7").position;
@@ -249,6 +252,9 @@ public class MeleeAttack : MonoBehaviour
                 {
                     chosenEnemy = GameObject.Find("player1SlotC");
                     playerStatus.leftA.isCaptured = true;
+                     if(playerStatus.leftC.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
+                    }
                     // Send to barrel.
                     infoBar.GetComponentInChildren<Text>().text = "Sent left's C player to the monkey barrel!";
                     chosenEnemy.transform.position = gridObject.transform.Find("Tile_27_7").position;
@@ -259,7 +265,10 @@ public class MeleeAttack : MonoBehaviour
                 if (chosenCharacter == "A")
                 {
                     chosenEnemy = GameObject.Find("player2SlotA");
-                    playerStatus.leftA.isCaptured = true;
+                    playerStatus.rightA.isCaptured = true;
+                     if(playerStatus.leftA.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
+                    }
                     // Send to barrel.
                     infoBar.GetComponentInChildren<Text>().text = "Sent rights's A player to the monkey barrel!";
                     chosenEnemy.transform.position = gridObject.transform.Find("Tile_2_7").position;
@@ -268,6 +277,9 @@ public class MeleeAttack : MonoBehaviour
                 {
                     chosenEnemy = GameObject.Find("player2SlotB");
                     playerStatus.leftA.isCaptured = true;
+                     if(playerStatus.rightB.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
+                    }
                     // Send to barrel.
                     infoBar.GetComponentInChildren<Text>().text = "Sent rights's B player to the monkey barrel!";
                     chosenEnemy.transform.position = gridObject.transform.Find("Tile_2_7").position;
@@ -276,6 +288,9 @@ public class MeleeAttack : MonoBehaviour
                 {
                     chosenEnemy = GameObject.Find("player2SlotC");
                     playerStatus.leftA.isCaptured = true;
+                     if(playerStatus.rightC.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
+                    }
                     // Send to barrel.
                     infoBar.GetComponentInChildren<Text>().text = "Sent rights's C player to the monkey barrel!";
                     chosenEnemy.transform.position = gridObject.transform.Find("Tile_2_7").position;
