@@ -240,7 +240,7 @@ public class MeleeAttack : MonoBehaviour
                 if (chosenCharacter == "B")
                 {
                     chosenEnemy = GameObject.Find("player1SlotB");
-                    playerStatus.leftA.isCaptured = true;
+                    playerStatus.leftB.isCaptured = true;
                      if(playerStatus.leftB.hasBandana){
                         bandannaCapture.captureBandanna(chosenEnemy); 
                     }
@@ -251,7 +251,7 @@ public class MeleeAttack : MonoBehaviour
                 if (chosenCharacter == "C")
                 {
                     chosenEnemy = GameObject.Find("player1SlotC");
-                    playerStatus.leftA.isCaptured = true;
+                    playerStatus.leftC.isCaptured = true;
                      if(playerStatus.leftC.hasBandana){
                         bandannaCapture.captureBandanna(chosenEnemy); 
                     }
@@ -260,13 +260,16 @@ public class MeleeAttack : MonoBehaviour
                     chosenEnemy.transform.position = gridObject.transform.Find("Tile_27_7").position;
                 }
             }
-            else
+            else // left is attacking right.
             {
                 if (chosenCharacter == "A")
                 {
+                    Debug.Log("meleeing rightA");
                     chosenEnemy = GameObject.Find("player2SlotA");
                     playerStatus.rightA.isCaptured = true;
-                     if(playerStatus.leftA.hasBandana){
+                    
+                     if(playerStatus.rightA.hasBandana){
+                        Debug.Log("hasB = true rightA");
                         bandannaCapture.captureBandanna(chosenEnemy); 
                     }
                     // Send to barrel.
@@ -276,7 +279,7 @@ public class MeleeAttack : MonoBehaviour
                 if (chosenCharacter == "B")
                 {
                     chosenEnemy = GameObject.Find("player2SlotB");
-                    playerStatus.leftA.isCaptured = true;
+                    playerStatus.rightB.isCaptured = true;
                      if(playerStatus.rightB.hasBandana){
                         bandannaCapture.captureBandanna(chosenEnemy); 
                     }
@@ -287,7 +290,7 @@ public class MeleeAttack : MonoBehaviour
                 if (chosenCharacter == "C")
                 {
                     chosenEnemy = GameObject.Find("player2SlotC");
-                    playerStatus.leftA.isCaptured = true;
+                    playerStatus.rightC.isCaptured = true;
                      if(playerStatus.rightC.hasBandana){
                         bandannaCapture.captureBandanna(chosenEnemy); 
                     }
