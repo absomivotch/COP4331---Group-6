@@ -70,6 +70,8 @@ public class bandannaCapture : MonoBehaviour
         playerStatus playerStatus = GameObject.Find("GridMap").GetComponent<playerStatus>();
         GameObject newParent;
         GameObject gridObject = GameObject.Find("GridMap"), level0Map = GameObject.Find("Level0Map");
+        GameObject team1level0Map = GameObject.Find("Level0Map/Teams/player1Team");
+        GameObject team2level0Map = GameObject.Find("Level0Map/Teams/player2Team");
 
         switch (playerSelect.currentCharacter)
         {
@@ -78,40 +80,37 @@ public class bandannaCapture : MonoBehaviour
                 newParent = GameObject.Find("player1SlotA");
                 playerStatus.bandannaRight.transform.SetParent(newParent.transform);
                 // need to warp the bandnana as well in each case!!!!!!
-                playerStatus.bandannaRight.transform.position = gridObject.transform.Find(newParent.name).position;
+                playerStatus.bandannaRight.transform.position = team1level0Map.transform.Find(newParent.name).position;
                 break;
             case "B":
                 playerStatus.leftB.hasBandana = true;
                 newParent = GameObject.Find("player1SlotB");
-                Debug.Log("BANDANA = " + playerStatus.bandannaRight.name);
-                Debug.Log("New parent =" + newParent.name);
                 playerStatus.bandannaRight.transform.SetParent(newParent.transform);
-                Debug.Log("gridObject = " + gridObject.name);
-                playerStatus.bandannaRight.transform.position = level0Map.transform.Find(newParent.name).position;
+                playerStatus.bandannaRight.transform.position = team1level0Map.transform.Find(newParent.name).position;
                 break;
             case "C":
                 playerStatus.leftC.hasBandana = true;
                 newParent = GameObject.Find("player1SlotC");
                 playerStatus.bandannaRight.transform.SetParent(newParent.transform);
-                playerStatus.bandannaRight.transform.position = gridObject.transform.Find(newParent.name).position;
+                 playerStatus.bandannaRight.transform.position = team1level0Map.transform.Find(newParent.name).position;
                 break;
             case "A2":
                 playerStatus.rightA.hasBandana = true;
                 newParent = GameObject.Find("player2SlotA");
                 playerStatus.bandannaRight.transform.SetParent(newParent.transform);
-                playerStatus.bandannaLeft.transform.position = gridObject.transform.Find(newParent.name).position;
+                 playerStatus.bandannaRight.transform.position = team2level0Map.transform.Find(newParent.name).position;
                 break;
             case "B2":
                 playerStatus.rightB.hasBandana = true;
                 newParent = GameObject.Find("player2SlotB");
                 playerStatus.bandannaRight.transform.SetParent(newParent.transform);
-                playerStatus.bandannaLeft.transform.position = gridObject.transform.Find(newParent.name).position;
+                 playerStatus.bandannaRight.transform.position = team2level0Map.transform.Find(newParent.name).position;
                 break;
             case "C2":
                 playerStatus.rightC.hasBandana = true;
                 newParent = GameObject.Find("player2SlotC");
                 playerStatus.bandannaRight.transform.SetParent(newParent.transform);
-                playerStatus.bandannaLeft.transform.position = gridObject.transform.Find(newParent.name).position;
+                 playerStatus.bandannaRight.transform.position = team2level0Map.transform.Find(newParent.name).position;
                 break;
             default:
                 break;
