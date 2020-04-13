@@ -17,15 +17,18 @@ public class playerStatus : MonoBehaviour
     public playerState leftA, leftB, leftC, rightA, rightB, rightC;
     public bool AisOK = false, BisOK = false, CisOK = false, meleeMode = false;
     public int turn;
+    public GameObject bandannaLeft, bandannaRight;
     void Start()
     {
         GameObject.Find("InfoBar").GetComponentInChildren<Text>().text = "Left's Turn, Double click to select characters";
         turn = 0;
+        bandannaLeft =  GameObject.Find("Level0Map/Teams/player1Team/player1SlotA/Bandana(Clone)");
+        bandannaRight =  GameObject.Find("Level0Map/Teams/player2Team/player2SlotA/Bandana(Clone)");
         // Initalize the players' states.
         leftA.moved = false;
         leftA.attacked = false;
         leftA.isCaptured = false;
-        leftA.hasBandana = false;
+        leftA.hasBandana = true;
 
         leftB.moved = false;
         leftB.attacked = false;
@@ -40,7 +43,7 @@ public class playerStatus : MonoBehaviour
         rightA.moved = false;
         rightA.attacked = false;
         rightA.isCaptured = false;
-        rightA.hasBandana = false;
+        rightA.hasBandana = true;
 
         rightB.moved = false;
         rightB.attacked = false;
@@ -86,4 +89,6 @@ public class playerStatus : MonoBehaviour
         rightC.attacked = false;
 
     }
+
+
 }

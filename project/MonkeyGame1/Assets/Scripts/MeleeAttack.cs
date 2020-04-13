@@ -24,8 +24,6 @@ public class MeleeAttack : MonoBehaviour
         GameObject gridObject = GameObject.Find("GridMap");
 
 
-
-
         // Clicked Melee button when text is Melee
         if (meleeButton.GetComponentInChildren<Text>().text == "Melee")
         {
@@ -122,7 +120,7 @@ public class MeleeAttack : MonoBehaviour
 
         if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
         {
-           
+
             if (playerStatus.turn == 1)
             {
                 switch (playerSelect.meleeingCharacter)
@@ -211,67 +209,94 @@ public class MeleeAttack : MonoBehaviour
             playerStatus.CisOK = false;
         }
 
-        void doMelee(string chosenCharacter)
+    }
+    void doMelee(string chosenCharacter)
+    {
+        GameObject meleeButton = GameObject.Find("MeleeButton"), infoBar = GameObject.Find("InfoBar"), chosenEnemy;
+        GameObject gridObject = GameObject.Find("GridMap");
+        playerSelect playerSelect = GameObject.Find("GameCamera").GetComponent<playerSelect>();
+        playerStatus playerStatus = GameObject.Find("GridMap").GetComponent<playerStatus>();
+        bandannaCapture bandannaCapture = GameObject.Find("GridMap").GetComponent<bandannaCapture>();
+
+        // Clicked Melee button when text is confirm melee.
+        if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
         {
-            // Clicked Melee button when text is confirm melee.
-            if (meleeButton.GetComponentInChildren<Text>().text == "Confirm Melee")
+
+            meleeButton.GetComponentInChildren<Text>().text = "Melee";
+
+            if (playerStatus.turn == 1)// Right is attacking left. ChoosenCharacter = left's guy that is getting attacked.
             {
-
-                meleeButton.GetComponentInChildren<Text>().text = "Melee";
-
-                if (playerStatus.turn == 1)
+                if (chosenCharacter == "A")
                 {
-                    if (chosenCharacter == "A")
-                    {
-                        chosenEnemy = GameObject.Find("player1SlotA");
-                        playerStatus.leftA.isCaptured = true;
-                        // Send to barrel.
-                        infoBar.GetComponentInChildren<Text>().text = "Sent left's A player to the monkey barrel!";
-                        chosenEnemy.transform.position = gridObject.transform.Find("Tile_27_7").position;
+                    chosenEnemy = GameObject.Find("player1SlotA");
+                    playerStatus.leftA.isCaptured = true;
+                    if(playerStatus.leftA.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
                     }
-                    if (chosenCharacter == "B")
-                    {
-                        chosenEnemy = GameObject.Find("player1SlotB");
-                        playerStatus.leftA.isCaptured = true;
-                        // Send to barrel.
-                        infoBar.GetComponentInChildren<Text>().text = "Sent left's B player to the monkey barrel!";
-                        chosenEnemy.transform.position = gridObject.transform.Find("Tile_27_7").position;
-                    }
-                    if (chosenCharacter == "C")
-                    {
-                        chosenEnemy = GameObject.Find("player1SlotC");
-                        playerStatus.leftA.isCaptured = true;
-                        // Send to barrel.
-                        infoBar.GetComponentInChildren<Text>().text = "Sent left's C player to the monkey barrel!";
-                        chosenEnemy.transform.position = gridObject.transform.Find("Tile_27_7").position;
-                    }
+                    // Send to barrel.
+                    infoBar.GetComponentInChildren<Text>().text = "Sent left's A player to the monkey barrel!";
+                    chosenEnemy.transform.position = gridObject.transform.Find("Tile_27_7").position;
                 }
-                else
+                if (chosenCharacter == "B")
                 {
-                    if (chosenCharacter == "A")
-                    {
-                        chosenEnemy = GameObject.Find("player2SlotA");
-                        playerStatus.leftA.isCaptured = true;
-                        // Send to barrel.
-                        infoBar.GetComponentInChildren<Text>().text = "Sent rights's A player to the monkey barrel!";
-                        chosenEnemy.transform.position = gridObject.transform.Find("Tile_2_7").position;
+                    chosenEnemy = GameObject.Find("player1SlotB");
+                    playerStatus.leftB.isCaptured = true;
+                     if(playerStatus.leftB.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
                     }
-                    if (chosenCharacter == "B")
-                    {
-                        chosenEnemy = GameObject.Find("player2SlotB");
-                        playerStatus.leftA.isCaptured = true;
-                        // Send to barrel.
-                        infoBar.GetComponentInChildren<Text>().text = "Sent rights's B player to the monkey barrel!";
-                        chosenEnemy.transform.position = gridObject.transform.Find("Tile_2_7").position;
+                    // Send to barrel.
+                    infoBar.GetComponentInChildren<Text>().text = "Sent left's B player to the monkey barrel!";
+                    chosenEnemy.transform.position = gridObject.transform.Find("Tile_27_7").position;
+                }
+                if (chosenCharacter == "C")
+                {
+                    chosenEnemy = GameObject.Find("player1SlotC");
+                    playerStatus.leftC.isCaptured = true;
+                     if(playerStatus.leftC.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
                     }
-                    if (chosenCharacter == "C")
-                    {
-                        chosenEnemy = GameObject.Find("player2SlotC");
-                        playerStatus.leftA.isCaptured = true;
-                        // Send to barrel.
-                        infoBar.GetComponentInChildren<Text>().text = "Sent rights's C player to the monkey barrel!";
-                        chosenEnemy.transform.position = gridObject.transform.Find("Tile_2_7").position;
+                    // Send to barrel.
+                    infoBar.GetComponentInChildren<Text>().text = "Sent left's C player to the monkey barrel!";
+                    chosenEnemy.transform.position = gridObject.transform.Find("Tile_27_7").position;
+                }
+            }
+            else // left is attacking right.
+            {
+                if (chosenCharacter == "A")
+                {
+                    Debug.Log("meleeing rightA");
+                    chosenEnemy = GameObject.Find("player2SlotA");
+                    playerStatus.rightA.isCaptured = true;
+                    
+                     if(playerStatus.rightA.hasBandana){
+                        Debug.Log("hasB = true rightA");
+                        bandannaCapture.captureBandanna(chosenEnemy); 
                     }
+                    // Send to barrel.
+                    infoBar.GetComponentInChildren<Text>().text = "Sent rights's A player to the monkey barrel!";
+                    chosenEnemy.transform.position = gridObject.transform.Find("Tile_2_7").position;
+                }
+                if (chosenCharacter == "B")
+                {
+                    chosenEnemy = GameObject.Find("player2SlotB");
+                    playerStatus.rightB.isCaptured = true;
+                     if(playerStatus.rightB.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
+                    }
+                    // Send to barrel.
+                    infoBar.GetComponentInChildren<Text>().text = "Sent rights's B player to the monkey barrel!";
+                    chosenEnemy.transform.position = gridObject.transform.Find("Tile_2_7").position;
+                }
+                if (chosenCharacter == "C")
+                {
+                    chosenEnemy = GameObject.Find("player2SlotC");
+                    playerStatus.rightC.isCaptured = true;
+                     if(playerStatus.rightC.hasBandana){
+                        bandannaCapture.captureBandanna(chosenEnemy); 
+                    }
+                    // Send to barrel.
+                    infoBar.GetComponentInChildren<Text>().text = "Sent rights's C player to the monkey barrel!";
+                    chosenEnemy.transform.position = gridObject.transform.Find("Tile_2_7").position;
                 }
             }
         }
